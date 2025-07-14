@@ -10,12 +10,8 @@ import {
   Users, 
   Zap, 
   Target, 
-  Camera, 
-  Code2, 
-  Gamepad2, 
-  Plane,
-  Music,
-  Book
+  Book,
+  Play
 } from "lucide-react";
 
 // Sample data
@@ -23,7 +19,7 @@ const timelineData: TimelineItem[] = [
   {
     id: "1",
     type: "work",
-    title: "シニアバックエンドエンジニア",
+    title: "バックエンドエンジニア",
     organization: "テックイノベーション株式会社",
     location: "東京",
     period: "2022年4月 - 現在",
@@ -151,42 +147,24 @@ const strengthsData: Strength[] = [
 ];
 
 const interestsData: Interest[] = [
-  {
+    {
     id: "1",
-    title: "写真撮影",
-    description: "風景や街角の写真を撮ることで、新しい視点や美しさを発見することを楽しんでいます。",
-    icon: <Camera className="w-8 h-8" />
+    title: "読書",
+    description: "世界を広げてくれるので、月2〜3冊読んでいます",
+    icon: <Book className="w-8 h-8" />
   },
   {
     id: "2",
-    title: "OSS貢献",
-    description: "オープンソースプロジェクトへの貢献を通じて、グローバルな開発コミュニティとの交流を深めています。",
-    icon: <Code2 className="w-8 h-8" />
+    title: "フルマラソン",
+    description: "継続することの大切さ、目標達成の喜びを感じるために、年2〜3回フルマラソンに挑戦しています。",
+    icon: <Zap className="w-8 h-8" />
   },
   {
     id: "3",
-    title: "ゲーム開発",
-    description: "個人プロジェクトとして小規模なゲーム開発を行い、創作活動を通じて技術力を磨いています。",
-    icon: <Gamepad2 className="w-8 h-8" />
+    title: "鹿島アントラーズのサポーター",
+    description: "「すべては勝利のために」「献身・誠実・尊重」のクラブ精神を体現する選手・スタッフから多くのことを学び、時にゴール裏で激しく応援しています。",
+    icon: <Play className="w-8 h-8" />
   },
-  {
-    id: "4",
-    title: "旅行",
-    description: "国内外の様々な場所を訪れ、異なる文化や価値観に触れることで視野を広げています。",
-    icon: <Plane className="w-8 h-8" />
-  },
-  {
-    id: "5",
-    title: "音楽鑑賞",
-    description: "ジャズからエレクトロニックまで幅広いジャンルの音楽を聴き、集中力とクリエイティビティを高めています。",
-    icon: <Music className="w-8 h-8" />
-  },
-  {
-    id: "6",
-    title: "技術書読書",
-    description: "最新の技術トレンドやソフトウェア設計の知識を書籍から学び、実務に活かしています。",
-    icon: <Book className="w-8 h-8" />
-  }
 ];
 
 const certificationsData: Certification[] = [
@@ -252,7 +230,7 @@ export function AboutSection() {
                   <Avatar className="w-32 h-32 border-4 border-background shadow-xl">
                     <AvatarImage 
                       src="/profile-photo.jpg" 
-                      alt="清水 貴明"
+                      alt="清水 隆亮"
                       className="object-cover"
                     />
                     <AvatarFallback className="text-3xl font-bold bg-gradient-to-br from-primary to-primary/70 text-white">
@@ -261,8 +239,8 @@ export function AboutSection() {
                   </Avatar>
                   
                   <div className="text-center sm:text-left flex-1">
-                    <h3 className="text-2xl font-bold mb-2">清水 貴明</h3>
-                    <p className="text-lg text-muted-foreground mb-4">シニアバックエンドエンジニア</p>
+                    <h3 className="text-2xl font-bold mb-2">清水 隆亮</h3>
+                    <p className="text-lg text-muted-foreground mb-4">バックエンドエンジニア</p>
                     <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
                       <Badge className="bg-emerald-100 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300">
                         Go
@@ -293,7 +271,7 @@ export function AboutSection() {
                     高性能なAPI開発を得意としています。
                   </p>
                   <p>
-                    現在はシニアバックエンドエンジニアとして、Go言語を中心とした
+                    現在はバックエンドエンジニアとして、Go言語を中心とした
                     マイクロサービスアーキテクチャの設計・実装をリードしています。
                     技術的な課題解決だけでなく、チームの技術力向上にも注力しており、
                     メンタリングや知識共有を積極的に行っています。

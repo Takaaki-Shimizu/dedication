@@ -33,7 +33,7 @@ const socialLinks = [
   },
   {
     name: "Email",
-    href: "mailto:takaki.shimizu@example.com",
+    href: "mailto:57.shimizu.takaaki@gmail.com",
     icon: Mail,
     description: "直接連絡"
   }
@@ -70,7 +70,7 @@ export function Footer() {
                 <span className="font-bold text-white text-lg">清</span>
               </div>
               <div>
-                <h3 className="font-bold text-xl">清水 貴明</h3>
+                <h3 className="font-bold text-xl">清水 隆亮</h3>
                 <p className="text-sm text-muted-foreground">Backend Engineer</p>
               </div>
             </div>
@@ -88,7 +88,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Mail className="w-4 h-4" />
-                <span>takaki.shimizu@example.com</span>
+                <span>57.shimizu.takaaki@gmail.com</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Clock className="w-4 h-4" />
@@ -145,7 +145,7 @@ export function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-center sm:text-left">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Takaki Shimizu. All rights reserved.
+              © {new Date().getFullYear()} Takaaki Shimizu. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground mt-1">
               Built with Next.js, TypeScript, and Tailwind CSS

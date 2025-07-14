@@ -15,7 +15,7 @@ import Link from "next/link";
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Takaki Shimizu",
+  "name": "Takaaki Shimizu",
   "jobTitle": "Backend Engineer",
   "description": "Backend engineer specializing in scalable systems, cloud architecture, and modern development practices.",
   "url": "https://dedication.vercel.app",
@@ -120,7 +120,7 @@ export default function Home() {
                     東京都
                   </p>
                   <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text text-transparent">
-                    清水 貴明
+                    清水 隆亮
                   </h1>
                   <div className="text-xl md:text-2xl lg:text-3xl text-muted-foreground min-h-[3rem] flex items-center justify-center lg:justify-start">
                     <TypingAnimation 
@@ -210,7 +210,7 @@ export default function Home() {
                   <Avatar className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 border-4 border-background shadow-2xl relative z-10 animate-float">
                     <AvatarImage 
                       src="/profile-placeholder.jpg" 
-                      alt="清水 貴明 プロフィール写真"
+                      alt="清水 隆亮 プロフィール写真"
                       className="object-cover"
                     />
                     <AvatarFallback className="text-6xl md:text-7xl font-bold bg-gradient-to-br from-purple-500 to-blue-500 text-white">
@@ -363,7 +363,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-6">その他の連絡方法</h3>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
                 <Button asChild variant="outline" size="lg" className="border-2 hover:border-primary hover:bg-primary/5 transition-all duration-300 min-w-[160px]">
-                  <Link href="mailto:takaki.shimizu@example.com">
+                  <Link href="mailto:57.shimizu.takaaki@gmail.com">
                     <Mail className="mr-2 h-5 w-5" />
                     直接メール
                   </Link>
@@ -389,7 +389,7 @@ export default function Home() {
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-semibold mb-2">メール</h4>
-                  <p className="text-sm text-muted-foreground">takaki.shimizu@example.com</p>
+                  <p className="text-sm text-muted-foreground">57.shimizu.takaaki@gmail.com</p>
                   <p className="text-xs text-muted-foreground mt-1">24時間以内に返信</p>
                 </div>
                 
@@ -407,7 +407,7 @@ export default function Home() {
                     <Linkedin className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-semibold mb-2">LinkedIn</h4>
-                  <p className="text-sm text-muted-foreground">Takaki Shimizu</p>
+                  <p className="text-sm text-muted-foreground">Takaaki Shimizu</p>
                   <p className="text-xs text-muted-foreground mt-1">プロフェッショナルネットワーク</p>
                 </div>
               </div>

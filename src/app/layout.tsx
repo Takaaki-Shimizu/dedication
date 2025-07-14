@@ -10,8 +10,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Takaki Shimizu | Backend Engineer Portfolio",
-    template: "%s | Takaki Shimizu",
+    default: "Takaaki Shimizu | Backend Engineer Portfolio",
+    template: "%s | Takaaki Shimizu",
   },
   description: "スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とするバックエンドエンジニア。Go、Python、AWSを用いた高性能なWebアプリケーション開発に従事。",
   keywords: [
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     "microservices", "システム設計", "クラウドアーキテクチャ", "API開発", "データベース設計",
     "Docker", "Kubernetes", "PostgreSQL", "MongoDB", "Redis", "CI/CD", "DevOps"
   ],
-  authors: [{ name: "Takaki Shimizu", url: "https://dedication.vercel.app" }],
-  creator: "清水 貴明 (Takaki Shimizu)",
-  publisher: "Takaki Shimizu",
+  authors: [{ name: "Takaaki Shimizu", url: "https://dedication.vercel.app" }],
+  creator: "清水 隆亮 (Takaaki Shimizu)",
+  publisher: "Takaaki Shimizu",
   metadataBase: new URL("https://dedication.vercel.app"),
   alternates: {
     canonical: "/",
@@ -34,15 +34,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ja_JP",
     url: "https://dedication.vercel.app",
-    title: "清水 貴明 | バックエンドエンジニア ポートフォリオ",
+    title: "清水 隆亮 | バックエンドエンジニア ポートフォリオ",
     description: "スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とするバックエンドエンジニア。Go、Python、AWSを用いた高性能なWebアプリケーション開発。",
-    siteName: "Takaki Shimizu Portfolio",
+    siteName: "Takaaki Shimizu Portfolio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "清水 貴明 - バックエンドエンジニア ポートフォリオ",
+        alt: "清水 隆亮 - バックエンドエンジニア ポートフォリオ",
       },
     ],
   },
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@takaakishimizu",
     creator: "@takaakishimizu",
-    title: "清水 貴明 | バックエンドエンジニア ポートフォリオ",
+    title: "清水 隆亮 | バックエンドエンジニア ポートフォリオ",
     description: "スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とするバックエンドエンジニア。",
     images: ["/og-image.jpg"],
   },

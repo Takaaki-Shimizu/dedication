@@ -296,7 +296,7 @@ export function ContactForm() {
               <strong>返信時間:</strong> 通常24時間以内にご返信いたします
             </p>
             <p>
-              <strong>緊急のご連絡:</strong> takaki.shimizu@example.com まで直接メールをお送りください
+              <strong>緊急のご連絡:</strong> 57.shimizu.takaaki@gmail.com まで直接メールをお送りください
             </p>
           </div>
         </div>

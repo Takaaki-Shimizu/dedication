@@ -94,7 +94,7 @@ export function HeaderNavigation() {
             <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary/70 rounded-lg flex items-center justify-center">
               <User className="w-5 h-5 text-white" />
             </div>
-            <span>Takaki Shimizu</span>
+            <span>Takaaki Shimizu</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -144,7 +144,7 @@ export function HeaderNavigation() {
                       <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary/70 rounded-lg flex items-center justify-center">
                         <User className="w-5 h-5 text-white" />
                       </div>
-                      <span className="font-bold text-lg">Takaki Shimizu</span>
+                      <span className="font-bold text-lg">Takaaki Shimizu</span>
                     </div>
                   </div>
 

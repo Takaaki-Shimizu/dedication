@@ -70,9 +70,9 @@ export default function NotFound() {
                 問題が解決しない場合は、お気軽にお問い合わせください
               </p>
               <Button asChild variant="ghost" size="sm" className="text-primary hover:text-primary/80">
-                <Link href="mailto:takaki.shimizu@example.com">
+                <Link href="mailto:57.shimizu.takaaki@gmail.com">
                   <Mail className="mr-2 h-4 w-4" />
-                  takaki.shimizu@example.com
+                  57.shimizu.takaaki@gmail.com
                 </Link>
               </Button>
             </div>
