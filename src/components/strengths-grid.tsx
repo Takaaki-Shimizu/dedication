@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Lightbulb, Users, Zap, Target, Heart, BookOpen } from "lucide-react";
+// Icons will be passed as props from parent component
 
 export interface Strength {
   id: string;

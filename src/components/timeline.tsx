@@ -67,9 +67,8 @@ export function Timeline({ items }: TimelineProps) {
       <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/20 via-primary/40 to-primary/20"></div>
       
       <div className="space-y-8">
-        {items.map((item, index) => {
+        {items.map((item) => {
           const isExpanded = expandedItems.has(item.id);
-          const isLast = index === items.length - 1;
           
           return (
             <div key={item.id} className="relative flex items-start gap-6">

@@ -59,7 +59,7 @@ export function ContactForm() {
     },
   });
 
-  const onSubmit = async (values: ContactFormValues) => {
+  const onSubmit = async () => {
     setFormState("sending");
     setStatusMessage("");
 
@@ -78,7 +78,7 @@ export function ContactForm() {
       } else {
         throw new Error("送信に失敗しました");
       }
-    } catch (error) {
+    } catch {
       setFormState("error");
       setStatusMessage("送信に失敗しました。しばらく時間をおいて再度お試しください。");
     }
@@ -129,7 +129,7 @@ export function ContactForm() {
       <CardContent className="space-y-6">
         {/* ステータスメッセージ */}
         {statusMessage && (
-          <div className={`p-4 rounded-lg border text-sm ${getStatusColor()}`}>
+          <div id="form-status" className={`p-4 rounded-lg border text-sm ${getStatusColor()}`} role="status" aria-live="polite">
             <div className="flex items-center gap-2">
               {getStatusIcon()}
               <span>{statusMessage}</span>
@@ -163,9 +163,14 @@ export function ContactForm() {
                       placeholder="山田 太郎"
                       className="h-12 text-base"
                       disabled={formState === "sending"}
+                      autoComplete="name"
+                      aria-describedby="name-description"
                       {...field}
                     />
                   </FormControl>
+                  <FormDescription id="name-description" className="sr-only">
+                    お名前を入力してください
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -186,6 +191,8 @@ export function ContactForm() {
                       type="email"
                       className="h-12 text-base"
                       disabled={formState === "sending"}
+                      autoComplete="email"
+                      aria-describedby="email-description"
                       {...field}
                     />
                   </FormControl>
@@ -212,6 +219,9 @@ export function ContactForm() {
                       {...field}
                     />
                   </FormControl>
+                  <FormDescription id="email-description" className="sr-only">
+                    メールアドレスを入力してください
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -248,7 +258,8 @@ export function ContactForm() {
                 type="submit"
                 size="lg"
                 disabled={formState === "sending"}
-                className="flex-1 h-12 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-base font-semibold"
+                className="flex-1 h-12 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-base font-semibold focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                aria-describedby={statusMessage ? "form-status" : undefined}
               >
                 {formState === "sending" ? (
                   <>

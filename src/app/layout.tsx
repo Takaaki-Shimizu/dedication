@@ -9,37 +9,71 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Takaki Shimizu | Backend Engineer Portfolio",
-  description: "Backend engineer specializing in scalable systems, cloud architecture, and modern development practices. Experienced in Go, Python, AWS, and microservices.",
-  keywords: ["backend engineer", "portfolio", "software engineer", "golang", "python", "aws", "microservices"],
-  authors: [{ name: "Takaki Shimizu" }],
-  creator: "Takaki Shimizu",
+  title: {
+    default: "Takaki Shimizu | Backend Engineer Portfolio",
+    template: "%s | Takaki Shimizu",
+  },
+  description: "スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とするバックエンドエンジニア。Go、Python、AWSを用いた高性能なWebアプリケーション開発に従事。",
+  keywords: [
+    "バックエンドエンジニア", "portfolio", "software engineer", "golang", "python", "aws", 
+    "microservices", "システム設計", "クラウドアーキテクチャ", "API開発", "データベース設計",
+    "Docker", "Kubernetes", "PostgreSQL", "MongoDB", "Redis", "CI/CD", "DevOps"
+  ],
+  authors: [{ name: "Takaki Shimizu", url: "https://dedication.vercel.app" }],
+  creator: "清水 貴明 (Takaki Shimizu)",
+  publisher: "Takaki Shimizu",
+  metadataBase: new URL("https://dedication.vercel.app"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "ja-JP": "/",
+      "en-US": "/en",
+    },
+  },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "ja_JP",
     url: "https://dedication.vercel.app",
-    title: "Takaki Shimizu | Backend Engineer Portfolio",
-    description: "Backend engineer specializing in scalable systems, cloud architecture, and modern development practices.",
+    title: "清水 貴明 | バックエンドエンジニア ポートフォリオ",
+    description: "スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とするバックエンドエンジニア。Go、Python、AWSを用いた高性能なWebアプリケーション開発。",
     siteName: "Takaki Shimizu Portfolio",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "清水 貴明 - バックエンドエンジニア ポートフォリオ",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Takaki Shimizu | Backend Engineer Portfolio",
-    description: "Backend engineer specializing in scalable systems, cloud architecture, and modern development practices.",
+    site: "@takaakishimizu",
+    creator: "@takaakishimizu",
+    title: "清水 貴明 | バックエンドエンジニア ポートフォリオ",
+    description: "スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とするバックエンドエンジニア。",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
     follow: true,
+    nocache: true,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code",
+  category: "technology",
+  classification: "portfolio",
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
 };
 
@@ -49,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="ja" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider
           attribute="class"

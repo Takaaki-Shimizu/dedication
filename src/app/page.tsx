@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
@@ -102,7 +101,7 @@ export default function Home() {
       <HeaderNavigation />
       
       <main>
-        <div id="hero" className="min-h-screen bg-hero-pattern bg-gradient-to-br from-background via-background to-muted/20 relative overflow-hidden pt-16"></div>
+        <div id="hero" className="min-h-screen bg-hero-pattern bg-gradient-to-br from-background via-background to-muted/20 relative overflow-hidden pt-16">
         {/* Background decorations */}
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-emerald-500/10 animate-gradient"></div>
         <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-float"></div>
@@ -238,6 +237,7 @@ export default function Home() {
               </div>
             </div>
           </section>
+        </div>
         </div>
 
         {/* About Section */}

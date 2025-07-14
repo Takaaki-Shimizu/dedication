@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Github, Linkedin, Mail, Twitter, ArrowUp, MapPin, Phone, Clock } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, ArrowUp, MapPin, Clock } from "lucide-react";
 
 const navigationLinks = [
   { name: "経歴・プロフィール", href: "#about" },
