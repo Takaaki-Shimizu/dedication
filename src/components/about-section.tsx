@@ -267,10 +267,10 @@ export function AboutSection() {
                     <p className="text-lg text-muted-foreground mb-4">バックエンドエンジニア</p>
                     <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
                       <Badge className="bg-emerald-100 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300">
-                        Go
+                         PHP
                       </Badge>
                       <Badge className="bg-blue-100 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300">
-                        Python
+                        JavaScript
                       </Badge>
                       <Badge className="bg-orange-100 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300">
                         AWS

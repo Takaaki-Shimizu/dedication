@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@takaakishimizu",
+    site: "@ilsbt",
     creator: "@takaakishimizu",
     title: "清水 隆亮 | バックエンドエンジニア ポートフォリオ",
     description: "スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とするバックエンドエンジニア。",

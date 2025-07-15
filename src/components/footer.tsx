@@ -15,7 +15,7 @@ const navigationLinks = [
 const socialLinks = [
   {
     name: "GitHub",
-    href: "https://github.com/takaakishimizu",
+    href: "https://github.com/Takaaki-Shimizu",
     icon: Github,
     description: "コードとプロジェクト"
   },
@@ -26,8 +26,8 @@ const socialLinks = [
     description: "プロフェッショナルネットワーク"
   },
   {
-    name: "Twitter",
-    href: "https://twitter.com/takaakishimizu", 
+    name: "X (Twitter)",
+    href: "https://x.com/ilsbt", 
     icon: Twitter,
     description: "技術情報とアップデート"
   },

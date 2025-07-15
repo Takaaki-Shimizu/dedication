@@ -18,7 +18,7 @@ const structuredData = {
   "description": "Backend engineer specializing in scalable systems, cloud architecture, and modern development practices.",
   "url": "https://dedication.vercel.app",
   "sameAs": [
-    "https://github.com/takaakishimizu",
+    "https://github.com/Takaaki-Shimizu",
     "https://linkedin.com/in/takaakishimizu"
   ],
   "knowsAbout": [
@@ -137,7 +137,7 @@ export default function Home() {
                     バックエンドエンジニアです。
                   </p>
                   <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                    Go、Python、AWSを用いたマイクロサービス開発で、
+                    PHP、JavaScript、AWSを用いたマイクロサービス開発で、
                     高性能なWebアプリケーションの構築を得意としています。
                   </p>
                 </div>
@@ -168,7 +168,7 @@ export default function Home() {
                 <div className="flex items-center gap-4 justify-center lg:justify-start pt-6">
                   <div className="flex gap-4">
                     <Button asChild variant="ghost" size="icon" className="hover:bg-primary/10 hover:scale-110 transition-all duration-300">
-                      <Link href="https://github.com/takaakishimizu" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://github.com/Takaaki-Shimizu" target="_blank" rel="noopener noreferrer">
                         <Github className="h-5 w-5" />
                         <span className="sr-only">GitHub</span>
                       </Link>
@@ -180,9 +180,9 @@ export default function Home() {
                       </Link>
                     </Button>
                     <Button asChild variant="ghost" size="icon" className="hover:bg-primary/10 hover:scale-110 transition-all duration-300">
-                      <Link href="https://twitter.com/takaakishimizu" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://x.com/ilsbt" target="_blank" rel="noopener noreferrer">
                         <Twitter className="h-5 w-5" />
-                        <span className="sr-only">Twitter</span>
+                        <span className="sr-only">X（Twitter）</span>
                       </Link>
                     </Button>
                   </div>
@@ -323,7 +323,7 @@ export default function Home() {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="border-2 border-blue-600/20 hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/20 magnetic-button min-w-[160px]">
-                  <Link href="https://github.com/takaakishimizu" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://github.com/Takaaki-Shimizu" target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-5 w-5" />
                     GitHub
                   </Link>
