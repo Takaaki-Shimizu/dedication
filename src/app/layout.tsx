@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   keywords: [
     "バックエンドエンジニア", "portfolio", "software engineer", "golang", "python", "aws", 
     "microservices", "システム設計", "クラウドアーキテクチャ", "API開発", "データベース設計",
-    "Docker", "Kubernetes", "PostgreSQL", "MongoDB", "Redis", "CI/CD", "DevOps"
+    "Docker", "PostgreSQL", "MongoDB", "Redis", "CI/CD", "DevOps"
   ],
   authors: [{ name: "Takaaki Shimizu", url: "https://dedication.vercel.app" }],
   creator: "清水 隆亮 (Takaaki Shimizu)",

@@ -2,7 +2,6 @@
 
 import { Timeline, type TimelineItem } from "./timeline";
 import { StrengthsGrid, type Strength, type Interest, type Certification } from "./strengths-grid";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -20,9 +19,8 @@ const timelineData: TimelineItem[] = [
     id: "1",
     type: "work",
     title: "バックエンドエンジニア",
-    organization: "テックイノベーション株式会社",
-    location: "東京",
-    period: "2022年4月 - 現在",
+    organization: "株式会社ウィルゲート",
+    period: "2022年9月 - 現在",
     current: true,
     description: [
       "マイクロサービスアーキテクチャの設計・実装を主導",
@@ -35,15 +33,14 @@ const timelineData: TimelineItem[] = [
       "チーム内のコードレビュー文化を確立し、バグ発生率を40%削減",
       "新入社員向けの技術研修プログラムを開発・実施"
     ],
-    skills: ["Go", "Kubernetes", "AWS", "PostgreSQL", "Redis", "Docker", "gRPC", "Prometheus"]
+    skills: ["Go", "AWS", "PostgreSQL", "Redis", "Docker", "gRPC", "Prometheus"]
   },
   {
     id: "2",
     type: "work",
     title: "バックエンドエンジニア",
-    organization: "フューチャーシステムズ合同会社",
-    location: "大阪",
-    period: "2020年3月 - 2022年3月",
+    organization: "株式会社システムシェアード",
+    period: "2020年8月 - 2022年8月",
     description: [
       "ECサイトのバックエンド開発とAPI設計",
       "Python (Django) を使ったWebアプリケーション開発",
@@ -59,10 +56,9 @@ const timelineData: TimelineItem[] = [
   {
     id: "3",
     type: "work",
-    title: "ジュニアソフトウェアエンジニア",
-    organization: "スタートアップテック株式会社",
-    location: "東京",
-    period: "2018年4月 - 2020年2月",
+    title: "不動産賃貸仲介",
+    organization: "株式会社ケン・コーポレーション",
+    period: "2016年4月 - 2019年7月",
     description: [
       "フルスタック開発でのWebアプリケーション構築",
       "React.js とNode.js を使ったSPAの開発",
@@ -77,10 +73,9 @@ const timelineData: TimelineItem[] = [
   {
     id: "4",
     type: "education",
-    title: "情報工学科 学士",
-    organization: "東京工業大学",
-    location: "東京",
-    period: "2014年4月 - 2018年3月",
+    title: "法学部法律学科 学士",
+    organization: "成蹊大学",
+    period: "2012年4月 - 2016年3月",
     description: [
       "コンピュータサイエンスの基礎から応用まで幅広く学習",
       "アルゴリズムとデータ構造、ソフトウェア工学を専攻",
@@ -161,7 +156,7 @@ const interestsData: Interest[] = [
   },
   {
     id: "3",
-    title: "鹿島アントラーズのサポーター",
+    title: "Jリーグ鹿島アントラーズのサポーター",
     description: "「すべては勝利のために」「献身・誠実・尊重」のクラブ精神を体現する選手・スタッフから多くのことを学び、時にゴール裏で激しく応援しています。",
     icon: <Play className="w-8 h-8" />
   },
@@ -170,34 +165,74 @@ const interestsData: Interest[] = [
 const certificationsData: Certification[] = [
   {
     id: "1",
-    name: "AWS Certified Solutions Architect - Professional",
-    issuer: "Amazon Web Services",
-    date: "2023年8月",
-    description: "AWSクラウドアーキテクチャの設計と実装に関する上級レベルの認定",
-    credentialId: "AWS-SAP-12345"
+    name: "応用情報技術者試験",
+    issuer: "独立行政法人情報処理推進機構",
+    date: "2024年12月26日",
+    description: "ITエンジニアとしての応用的な知識とスキルの国家資格"
   },
   {
     id: "2",
-    name: "Certified Kubernetes Administrator (CKA)",
-    issuer: "Cloud Native Computing Foundation",
-    date: "2023年3月",
-    description: "Kubernetesクラスターの管理と運用に関する実践的な認定",
-    credentialId: "CKA-67890"
+    name: "ファイナンシャルプランニング技能検定2級",
+    issuer: "日本FP協会",
+    date: "2018年7月2日",
+    description: "ファイナンシャルプランニングに関する専門知識の資格"
   },
   {
     id: "3",
-    name: "Google Cloud Professional Cloud Architect",
-    issuer: "Google Cloud",
-    date: "2022年11月",
-    description: "Google Cloudでのクラウドアーキテクチャ設計・実装の専門認定"
+    name: "ファイナンシャルプランニング技能検定3級",
+    issuer: "日本FP協会",
+    date: "2018年7月2日",
+    description: "ファイナンシャルプランニングの基礎知識の資格"
   },
   {
     id: "4",
-    name: "基本情報技術者試験",
-    issuer: "独立行政法人情報処理推進機構",
-    date: "2017年12月",
-    description: "ITエンジニアとしての基本的な知識とスキルの国家資格"
-  }
+    name: "宅地建物取引士",
+    issuer: "国土交通省",
+    date: "2016年12月2日",
+    description: "不動産取引に関する専門知識の国家資格"
+  },
+  {
+    id: "5",
+    name: "CompTIA Security+",
+    issuer: "CompTIA",
+    date: "2021年10月31日",
+    description: "情報セキュリティに関する国際認定資格",
+    expired: true
+  },
+  {
+    id: "6",
+    name: "CompTIA Project+",
+    issuer: "CompTIA",
+    date: "2021年2月27日",
+    description: "プロジェクト管理に関する国際認定資格",
+    expired: true
+  },
+  {
+    id: "7",
+    name: "AWS認定ソリューションアーキテクトアソシエイトレベル",
+    issuer: "Amazon Web Services",
+    date: "2021年1月31日",
+    description: "AWSクラウドアーキテクチャの設計と実装に関する認定資格",
+    credentialId: "AWS-SAA-12345",
+    expired: true
+  },
+  {
+    id: "8",
+    name: "AWS認定クラウドプラクティショナーレベル",
+    issuer: "Amazon Web Services",
+    date: "2020年12月6日",
+    description: "AWS クラウドの基礎知識に関する認定資格",
+    credentialId: "AWS-CCP-67890",
+    expired: true
+  },
+  {
+    id: "9",
+    name: "Java SE 8 認定資格 OCJ-P Silver SE 8",
+    issuer: "Oracle",
+    date: "2020年8月23日",
+    description: "Java言語のプログラミング知識に関する認定資格",
+    expired: true
+  },
 ];
 
 export function AboutSection() {
@@ -226,18 +261,7 @@ export function AboutSection() {
             {/* Profile Card */}
             <Card className="bg-gradient-to-br from-background to-muted/20 border-2">
               <CardContent className="p-8">
-                <div className="flex flex-col sm:flex-row items-center gap-6">
-                  <Avatar className="w-32 h-32 border-4 border-background shadow-xl">
-                    <AvatarImage 
-                      src="/profile-photo.jpg" 
-                      alt="清水 隆亮"
-                      className="object-cover"
-                    />
-                    <AvatarFallback className="text-3xl font-bold bg-gradient-to-br from-primary to-primary/70 text-white">
-                      清水
-                    </AvatarFallback>
-                  </Avatar>
-                  
+                <div className="flex flex-col sm:flex-row items-center gap-6">                  
                   <div className="text-center sm:text-left flex-1">
                     <h3 className="text-2xl font-bold mb-2">清水 隆亮</h3>
                     <p className="text-lg text-muted-foreground mb-4">バックエンドエンジニア</p>
@@ -250,9 +274,6 @@ export function AboutSection() {
                       </Badge>
                       <Badge className="bg-orange-100 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300">
                         AWS
-                      </Badge>
-                      <Badge className="bg-purple-100 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300">
-                        Kubernetes
                       </Badge>
                     </div>
                   </div>
@@ -277,7 +298,7 @@ export function AboutSection() {
                     メンタリングや知識共有を積極的に行っています。
                   </p>
                   <p>
-                    新しい技術への学習意欲が高く、AWSやKubernetesなどのクラウド技術、
+                    新しい技術への学習意欲が高く、AWSなどのクラウド技術、
                     AI・機械学習分野にも継続的に取り組んでいます。
                     エンジニアとしてのキャリアを通じて、技術力の向上と
                     チーム・組織への貢献の両立を大切にしています。

@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { TypingAnimation } from "@/components/typing-animation";
 import { SkillCard } from "@/components/skill-card";
@@ -74,7 +72,6 @@ const skillsData = {
     skills: [
       { name: "AWS", level: 88, years: 4, description: "EC2、ECS、Lambda、RDS、S3等を使ったクラウドアーキテクチャ設計" },
       { name: "Docker", level: 90, years: 4, description: "コンテナ化、マルチステージビルド、開発環境の標準化" },
-      { name: "Kubernetes", level: 75, years: 2, description: "オーケストレーション、自動スケーリング、サービスメッシュ" }
     ]
   },
   tools: {
@@ -117,7 +114,7 @@ export default function Home() {
                 <div className="space-y-2">
                   <p className="text-sm uppercase tracking-wider text-muted-foreground font-medium">
                     <MapPin className="inline w-4 h-4 mr-1" />
-                    東京都
+                    埼玉県
                   </p>
                   <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text text-transparent">
                     清水 隆亮
@@ -189,50 +186,6 @@ export default function Home() {
                     </Button>
                   </div>
                   <Separator orientation="vertical" className="h-8" />
-                  <div className="flex gap-2">
-                    <Badge variant="secondary" className="bg-emerald-100 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300">
-                      Go
-                    </Badge>
-                    <Badge variant="secondary" className="bg-blue-100 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300">
-                      Python
-                    </Badge>
-                    <Badge variant="secondary" className="bg-orange-100 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300">
-                      AWS
-                    </Badge>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Column - Profile Image */}
-              <div className="flex justify-center lg:justify-end animate-fade-in-right">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full blur-2xl opacity-30 animate-pulse"></div>
-                  <Avatar className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 border-4 border-background shadow-2xl relative z-10 animate-float">
-                    <AvatarImage 
-                      src="/profile-placeholder.jpg" 
-                      alt="清水 隆亮 プロフィール写真"
-                      className="object-cover"
-                    />
-                    <AvatarFallback className="text-6xl md:text-7xl font-bold bg-gradient-to-br from-purple-500 to-blue-500 text-white">
-                      清水
-                    </AvatarFallback>
-                  </Avatar>
-                  {/* Floating badges around the avatar */}
-                  <div className="absolute -top-4 -right-4 animate-bounce">
-                    <Badge className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-3 py-1 text-sm font-semibold shadow-lg">
-                      Backend
-                    </Badge>
-                  </div>
-                  <div className="absolute -bottom-4 -left-4 animate-bounce" style={{animationDelay: "0.5s"}}>
-                    <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 text-sm font-semibold shadow-lg">
-                      Cloud
-                    </Badge>
-                  </div>
-                  <div className="absolute top-1/2 -left-8 animate-bounce" style={{animationDelay: "1s"}}>
-                    <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 text-sm font-semibold shadow-lg">
-                      API
-                    </Badge>
-                  </div>
                 </div>
               </div>
             </div>
@@ -253,7 +206,7 @@ export default function Home() {
                 技術スタック & スキル
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                実務経験と継続的な学習を通じて培った技術力。各分野での習熟度と経験年数を
+                各分野での習熟度と経験年数を
                 プログレスバーと星評価で視覚的に表現しています。
               </p>
             </div>

@@ -1,7 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ChevronDown, ChevronUp } from "lucide-react";
 // Icons will be passed as props from parent component
 
 export interface Strength {
@@ -27,6 +30,7 @@ export interface Certification {
   date: string;
   description?: string;
   credentialId?: string;
+  expired?: boolean;
 }
 
 interface StrengthsGridProps {
@@ -36,6 +40,12 @@ interface StrengthsGridProps {
 }
 
 export function StrengthsGrid({ strengths, interests, certifications }: StrengthsGridProps) {
+  const [showExpiredCerts, setShowExpiredCerts] = useState(false);
+
+  // 資格を有効と期限切れに分ける
+  const activeCertifications = certifications.filter(cert => !cert.expired);
+  const expiredCertifications = certifications.filter(cert => cert.expired);
+
   return (
     <div className="space-y-12">
       {/* Strengths Section */}
@@ -103,8 +113,10 @@ export function StrengthsGrid({ strengths, interests, certifications }: Strength
       {/* Certifications Section */}
       <div>
         <h3 className="text-2xl font-bold mb-6 text-center">資格・証明書</h3>
-        <div className="space-y-4">
-          {certifications.map((cert, index) => (
+        
+        {/* 有効な資格 */}
+        <div className="space-y-4 mb-6">
+          {activeCertifications.map((cert, index) => (
             <Card 
               key={cert.id}
               className="hover:shadow-lg transition-all duration-300 animate-fade-in-up"
@@ -136,6 +148,67 @@ export function StrengthsGrid({ strengths, interests, certifications }: Strength
             </Card>
           ))}
         </div>
+
+        {/* 期限切れ資格セクション */}
+        {expiredCertifications.length > 0 && (
+          <div>
+            <div className="flex items-center justify-center mb-4">
+              <Button
+                variant="outline"
+                onClick={() => setShowExpiredCerts(!showExpiredCerts)}
+                className="flex items-center gap-2 border-2 hover:border-muted-foreground"
+              >
+                期限切れ資格を{showExpiredCerts ? '隠す' : '表示'}
+                {showExpiredCerts ? (
+                  <ChevronUp className="w-4 h-4" />
+                ) : (
+                  <ChevronDown className="w-4 h-4" />
+                )}
+              </Button>
+            </div>
+
+            {showExpiredCerts && (
+              <div className="space-y-4 animate-fade-in-up">
+                {expiredCertifications.map((cert, index) => (
+                  <Card 
+                    key={cert.id}
+                    className="hover:shadow-lg transition-all duration-300 opacity-75 border-dashed"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <CardContent className="p-6">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-1">
+                            <h4 className="font-semibold text-lg text-muted-foreground">{cert.name}</h4>
+                            <Badge variant="destructive" className="text-xs">
+                              期限切れ
+                            </Badge>
+                          </div>
+                          <p className="text-muted-foreground mb-2">{cert.issuer}</p>
+                          {cert.description && (
+                            <p className="text-sm text-muted-foreground mb-3">{cert.description}</p>
+                          )}
+                          {cert.credentialId && (
+                            <div className="flex items-center gap-2">
+                              <Badge variant="outline" className="text-xs opacity-60">
+                                認証ID: {cert.credentialId}
+                              </Badge>
+                            </div>
+                          )}
+                        </div>
+                        <div className="text-right">
+                          <Badge variant="secondary" className="opacity-60">
+                            {cert.date}
+                          </Badge>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

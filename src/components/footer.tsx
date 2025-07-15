@@ -67,7 +67,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-primary to-primary/70 rounded-lg flex items-center justify-center">
-                <span className="font-bold text-white text-lg">清</span>
+                <span className="font-bold text-white text-lg">Takaaki Shimizu</span>
               </div>
               <div>
                 <h3 className="font-bold text-xl">清水 隆亮</h3>
@@ -84,7 +84,7 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4" />
-                <span>東京都</span>
+                <span>埼玉県</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Mail className="w-4 h-4" />
