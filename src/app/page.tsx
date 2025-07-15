@@ -19,7 +19,7 @@ const structuredData = {
   "url": "https://dedication.vercel.app",
   "sameAs": [
     "https://github.com/Takaaki-Shimizu",
-    "https://linkedin.com/in/takaakishimizu"
+    "https://www.linkedin.com/in/takaaki-shimizu-3813a7375"
   ],
   "knowsAbout": [
     "Backend Development",
@@ -169,7 +169,7 @@ export default function Home() {
                       </Link>
                     </Button>
                     <Button asChild variant="ghost" size="icon" className="hover:bg-primary/10 hover:scale-110 transition-all duration-300">
-                      <Link href="https://linkedin.com/in/takaakishimizu" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://linkedin.com/in/takaaki-shimizu-3813a7375" target="_blank" rel="noopener noreferrer">
                         <Linkedin className="h-5 w-5" />
                         <span className="sr-only">LinkedIn</span>
                       </Link>
@@ -324,7 +324,7 @@ export default function Home() {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="border-2 border-blue-600/20 hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/20 magnetic-button min-w-[160px]">
-                  <Link href="https://linkedin.com/in/takaakishimizu" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://linkedin.com/in/takaaki-shimizu-3813a7375" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="mr-2 h-5 w-5" />
                     LinkedIn
                   </Link>

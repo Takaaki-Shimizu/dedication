@@ -21,7 +21,7 @@ const socialLinks = [
   },
   {
     name: "LinkedIn", 
-    href: "https://linkedin.com/in/takaakishimizu",
+    href: "https://linkedin.com/in/takaaki-shimizu-3813a7375",
     icon: Linkedin,
     description: "プロフェッショナルネットワーク"
   },
