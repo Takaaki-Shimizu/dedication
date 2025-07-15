@@ -38,10 +38,8 @@ const skillsData = {
     icon: <Server className="h-6 w-6 text-white" />,
     color: "from-blue-600 to-blue-700",
     skills: [
-      { name: "Python", level: 95, years: 5, description: "Django、FastAPI、Flask等を用いたWebアプリケーション開発" },
-      { name: "Go", level: 90, years: 3, description: "高性能なマイクロサービス、API開発、並行処理プログラミング" },
-      { name: "Node.js", level: 85, years: 4, description: "Express.js、NestJSを使ったRESTful API、リアルタイム通信" },
-      { name: "Java", level: 80, years: 3, description: "Spring Boot、Maven、エンタープライズアプリケーション開発" }
+      { name: "PHP", level: 70, years: 3, description: "Laravelを用いたWebアプリケーション開発" },
+      { name: "Java", level: 30, years: 1, description: "Spring Boot、Maven、Webアプリケーション開発" }
     ]
   },
   frontend: {
@@ -59,10 +57,7 @@ const skillsData = {
     icon: <Database className="h-6 w-6 text-white" />,
     color: "from-slate-600 to-slate-700",
     skills: [
-      { name: "PostgreSQL", level: 90, years: 5, description: "複雑なクエリ設計、パフォーマンスチューニング、レプリケーション" },
       { name: "MySQL", level: 85, years: 4, description: "データベース設計、インデックス最適化、トランザクション管理" },
-      { name: "MongoDB", level: 80, years: 3, description: "NoSQLデータモデリング、アグリゲーション、シャーディング" },
-      { name: "Redis", level: 85, years: 3, description: "キャッシュ戦略、セッション管理、リアルタイム機能実装" }
     ]
   },
   infrastructure: {
@@ -133,11 +128,11 @@ export default function Home() {
 
                 <div className="space-y-4 max-w-2xl">
                   <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                    スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とする
-                    バックエンドエンジニアです。
+                    顧客とのコミュニケーションを大切にし、要件定義から設計、実装、運用まで
+                    一貫して対応可能なバックエンドエンジニアです。
                   </p>
                   <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                    PHP、JavaScript、AWSを用いたマイクロサービス開発で、
+                    PHP、JavaScript、AWSを用いた開発で、
                     高性能なWebアプリケーションの構築を得意としています。
                   </p>
                 </div>
