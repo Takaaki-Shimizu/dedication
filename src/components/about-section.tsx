@@ -89,8 +89,8 @@ const timelineData: TimelineItem[] = [
 const strengthsData: Strength[] = [
   {
     id: "1",
-    title: "問題解決力",
-    description: "複雑な技術的課題を分析し、効率的で実装可能な解決策を見つけることが得意です。",
+    title: "言葉",
+    description: "相手に届ける言葉を選ぶのが得意です。",
     icon: <Lightbulb className="w-6 h-6" />,
     color: "from-yellow-500 to-orange-500",
     examples: [
@@ -118,9 +118,8 @@ const strengthsData: Strength[] = [
     icon: <Zap className="w-6 h-6" />,
     color: "from-emerald-500 to-teal-500",
     examples: [
-      "新しいプログラミング言語の習得と業務での活用",
-      "技術書の読書とアウトプットの継続",
-      "OSS貢献を通じたスキル向上"
+      "不動産業界からの転職時は、スクールで1日10時間以上の学習を2ヶ月半継続し、ブログでのアウトプットも80日連続で行いました",
+      "不動産業界時代から業務に必要な資格以外も取得しており、足りない知識を補い続けてきました",
     ]
   },
   {
@@ -138,28 +137,34 @@ const strengthsData: Strength[] = [
 ];
 
 const interestsData: Interest[] = [
-    {
+  {
     id: "1",
     title: "読書",
-    description: "世界を広げてくれるので、月2〜3冊読んでいます",
+    description: "自分の世界を広げてくれるので、月2〜3冊読んでNotionにまとめています。",
     icon: <Book className="w-8 h-8" />
   },
   {
     id: "2",
+    title: "セキュリティ",
+    description: "情報処理安全確保支援士に挑戦中(後4点で落ちたので、午後試験対策を強化中です)。",
+    icon: <Wine className="w-8 h-8" />
+  },
+  {
+    id: "3",
     title: "フルマラソン",
     description: "継続することの大切さ、目標達成の喜びを感じるために、年2〜3回フルマラソンに挑戦しています。",
     icon: <Activity className="w-8 h-8" />
   },
   {
-    id: "3",
-    title: "Jリーグ鹿島アントラーズのサポーター",
+    id: "4",
+    title: "鹿島アントラーズ",
     description: "「すべては勝利のために」「献身・誠実・尊重」のクラブ精神を体現する選手・スタッフから多くのことを学び、時にゴール裏で激しく応援しています。",
     icon: <Trophy className="w-8 h-8" />
   },
-    {
-    id: "4",
+  {
+    id: "5",
     title: "お酒",
-    description: "日本酒かクラフトビールを好みます。最近はウイスキーにも挑戦中です。",
+    description: "日本酒やクラフトビールを好みます。最近はウイスキーにも挑戦中です。",
     icon: <Wine className="w-8 h-8" />
   },
 ];
@@ -218,7 +223,7 @@ const certificationsData: Certification[] = [
   },
   {
     id: "8",
-    name: "AWS認定ソリューションアーキテクトアソシエイトレベル",
+    name: "AWS Certified Solutions Architect - Associate",
     issuer: "Amazon Web Services",
     date: "2021年1月31日",
     description: "AWSクラウドアーキテクチャの設計と実装に関する認定資格",
@@ -226,7 +231,7 @@ const certificationsData: Certification[] = [
   },
   {
     id: "9",
-    name: "AWS認定クラウドプラクティショナーレベル",
+    name: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services",
     date: "2020年12月6日",
     description: "AWS クラウドの基礎知識に関する認定資格",

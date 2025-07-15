@@ -117,7 +117,7 @@ export default function Home() {
                   </h1>
                   <div className="text-xl md:text-2xl lg:text-3xl text-muted-foreground min-h-[3rem] flex items-center justify-center lg:justify-start">
                     <TypingAnimation 
-                      texts={["エンジニア", "フルスタック開発者", "システムアーキテクト"]}
+                      texts={["営業（過去）", "エンジニア（現在）", "プロダクトマネージャー（未来）"]}
                       className="font-semibold"
                       typingSpeed={80}
                       deletingSpeed={40}
@@ -132,8 +132,8 @@ export default function Home() {
                     一貫して対応可能なエンジニアです。
                   </p>
                   <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                    PHP、JavaScript、AWSを用いた開発で、
-                    高性能なWebアプリケーションの構築を得意としています。
+                    「顧客が心から欲しいプロダクトを届ける」を信条として、
+                    エンジニアのロールにとどまらない動きを心がけています。
                   </p>
                 </div>
 
