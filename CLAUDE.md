@@ -2,7 +2,7 @@
 
 ## プロジェクト概要
 
-バックエンドエンジニアのポートフォリオサイト。Next.js 15 + TypeScript + Tailwind CSS + shadcn/ui を使用したモダンなレスポンシブWebサイト。
+エンジニアのポートフォリオサイト。Next.js 15 + TypeScript + Tailwind CSS + shadcn/ui を使用したモダンなレスポンシブWebサイト。
 
 ## 技術スタック
 

@@ -13,9 +13,9 @@ export const metadata: Metadata = {
     default: "Takaaki Shimizu | Backend Engineer Portfolio",
     template: "%s | Takaaki Shimizu",
   },
-  description: "スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とするバックエンドエンジニア。Go、Python、AWSを用いた高性能なWebアプリケーション開発に従事。",
+  description: "スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とするエンジニア。Go、Python、AWSを用いた高性能なWebアプリケーション開発に従事。",
   keywords: [
-    "バックエンドエンジニア", "portfolio", "software engineer", "golang", "python", "aws", 
+    "エンジニア", "portfolio", "software engineer", "golang", "python", "aws", 
     "microservices", "システム設計", "クラウドアーキテクチャ", "API開発", "データベース設計",
     "Docker", "PostgreSQL", "MongoDB", "Redis", "CI/CD", "DevOps"
   ],
@@ -34,15 +34,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ja_JP",
     url: "https://dedication.vercel.app",
-    title: "清水 隆亮 | バックエンドエンジニア ポートフォリオ",
-    description: "スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とするバックエンドエンジニア。Go、Python、AWSを用いた高性能なWebアプリケーション開発。",
+    title: "清水 隆亮 | エンジニア ポートフォリオ",
+    description: "スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とするエンジニア。Go、Python、AWSを用いた高性能なWebアプリケーション開発。",
     siteName: "Takaaki Shimizu Portfolio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "清水 隆亮 - バックエンドエンジニア ポートフォリオ",
+        alt: "清水 隆亮 - エンジニア ポートフォリオ",
       },
     ],
   },
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@ilsbt",
     creator: "@takaakishimizu",
-    title: "清水 隆亮 | バックエンドエンジニア ポートフォリオ",
-    description: "スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とするバックエンドエンジニア。",
+    title: "清水 隆亮 | エンジニア ポートフォリオ",
+    description: "スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とするエンジニア。",
     images: ["/og-image.jpg"],
   },
   robots: {

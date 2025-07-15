@@ -10,7 +10,9 @@ import {
   Zap, 
   Target, 
   Book,
-  Play
+  Trophy,
+  Activity,
+  Wine,
 } from "lucide-react";
 
 // Sample data
@@ -18,57 +20,53 @@ const timelineData: TimelineItem[] = [
   {
     id: "1",
     type: "work",
-    title: "バックエンドエンジニア",
+    title: "エンジニア",
     organization: "株式会社ウィルゲート",
     period: "2022年9月 - 現在",
     current: true,
     description: [
-      "マイクロサービスアーキテクチャの設計・実装を主導",
-      "Go言語を使った高性能APIの開発とパフォーマンス最適化",
-      "DevOpsパイプラインの構築とクラウドインフラ管理"
+      "取材支援システムの要件定義-設計-開発-テスト-運用を担当",
+      "顧客とのフロント業務を担当",
     ],
     achievements: [
-      "APIレスポンス時間を70%短縮する最適化を実施",
-      "月間1,000万リクエストを処理するシステムアーキテクチャを設計",
-      "チーム内のコードレビュー文化を確立し、バグ発生率を40%削減",
-      "新入社員向けの技術研修プログラムを開発・実施"
+      "PHPerKaigi2025にて登壇(20分セッション)",
+      "PHPカンファレンス香川2024にてスタッフとして運営参加",
+      "PHPerKaigi2024にて登壇(LTセッション)",
     ],
-    skills: ["Go", "AWS", "PostgreSQL", "Redis", "Docker", "gRPC", "Prometheus"]
+    skills: ["React", "Vue", "Laravel", "AWS", "Docker", "MySQL"]
   },
   {
     id: "2",
     type: "work",
-    title: "バックエンドエンジニア",
+    title: "エンジニア",
     organization: "株式会社システムシェアード",
     period: "2020年8月 - 2022年8月",
     description: [
-      "ECサイトのバックエンド開発とAPI設計",
-      "Python (Django) を使ったWebアプリケーション開発",
-      "データベース設計とパフォーマンスチューニング"
+      "生命保険会社のシミュレーションサイトのバックエンド開発",
+      "携帯ショップの受付発見システムのフロントエンド開発",
     ],
     achievements: [
       "レガシーシステムのモダンアーキテクチャへの移行を完了",
       "自動テストカバレッジを20%から85%まで向上",
       "決済システムのセキュリティ強化を実施"
     ],
-    skills: ["Python", "Django", "PostgreSQL", "AWS", "Docker", "Jenkins", "REST API"]
+    skills: ["React", "Vue", "Laravel", "AWS"]
   },
   {
     id: "3",
     type: "work",
-    title: "不動産賃貸仲介",
+    title: "不動産賃貸仲介営業",
     organization: "株式会社ケン・コーポレーション",
     period: "2016年4月 - 2019年7月",
     description: [
-      "フルスタック開発でのWebアプリケーション構築",
-      "React.js とNode.js を使ったSPAの開発",
-      "小規模チームでのアジャイル開発の経験"
+      "都内高級賃貸住宅の仲介営業",
+      "顧客要望から物件提案・案内・契約手続き・アフターフォローまでを担当",
+      "1組ごとの「なぜ借りたいか」に視点をあてたきめ細やかな接客を実施",
     ],
     achievements: [
-      "ユーザー数3倍増加に貢献するUI/UX改善を実施",
-      "開発効率向上のためのツール作成・導入"
+      "医者、弁護士、スポーツ選手、社長などからの信頼を得ることができ、リピートや紹介を獲得",
     ],
-    skills: ["JavaScript", "React", "Node.js", "MongoDB", "Express.js", "HTML/CSS"]
+    skills: ["顧客対応", "交渉", "契約"]
   },
   {
     id: "4",
@@ -77,16 +75,14 @@ const timelineData: TimelineItem[] = [
     organization: "成蹊大学",
     period: "2012年4月 - 2016年3月",
     description: [
-      "コンピュータサイエンスの基礎から応用まで幅広く学習",
-      "アルゴリズムとデータ構造、ソフトウェア工学を専攻",
-      "卒業研究では機械学習を使った画像認識システムを開発"
+      "会社法と商法を中心に学習",
+      "2年次は起業家体験プログラムに参加し、株式会社の一生を体験",
+      "3・4年次は会社法、商法の判例を元に大学対抗でのディベートに参加",
     ],
     achievements: [
-      "学業成績優秀者として学科代表に選出",
-      "プログラミングコンテストで3位入賞",
-      "オープンソースプロジェクトに継続的に貢献"
+      "体育会卓球部に所属し、3年次からはレギュラーとして関東学生卓球リーグ4部の優勝に貢献"
     ],
-    skills: ["C++", "Java", "Python", "機械学習", "数学", "統計学"]
+    skills: ["法律知識", "ディベート", "論理的思考"]
   }
 ];
 
@@ -152,13 +148,19 @@ const interestsData: Interest[] = [
     id: "2",
     title: "フルマラソン",
     description: "継続することの大切さ、目標達成の喜びを感じるために、年2〜3回フルマラソンに挑戦しています。",
-    icon: <Zap className="w-8 h-8" />
+    icon: <Activity className="w-8 h-8" />
   },
   {
     id: "3",
     title: "Jリーグ鹿島アントラーズのサポーター",
     description: "「すべては勝利のために」「献身・誠実・尊重」のクラブ精神を体現する選手・スタッフから多くのことを学び、時にゴール裏で激しく応援しています。",
-    icon: <Play className="w-8 h-8" />
+    icon: <Trophy className="w-8 h-8" />
+  },
+    {
+    id: "4",
+    title: "お酒",
+    description: "日本酒かクラフトビールを好みます。最近はウイスキーにも挑戦中です。",
+    icon: <Wine className="w-8 h-8" />
   },
 ];
 
@@ -269,7 +271,7 @@ export function AboutSection() {
                 <div className="flex flex-col sm:flex-row items-center gap-6">                  
                   <div className="text-center sm:text-left flex-1">
                     <h3 className="text-2xl font-bold mb-2">清水 隆亮</h3>
-                    <p className="text-lg text-muted-foreground mb-4">バックエンドエンジニア</p>
+                    <p className="text-lg text-muted-foreground mb-4">エンジニア</p>
                     <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
                       <Badge className="bg-emerald-100 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300">
                          PHP
@@ -297,7 +299,7 @@ export function AboutSection() {
                     高性能なAPI開発を得意としています。
                   </p>
                   <p>
-                    現在はバックエンドエンジニアとして、Go言語を中心とした
+                    現在はエンジニアとして、Go言語を中心とした
                     マイクロサービスアーキテクチャの設計・実装をリードしています。
                     技術的な課題解決だけでなく、チームの技術力向上にも注力しており、
                     メンタリングや知識共有を積極的に行っています。

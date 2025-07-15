@@ -76,7 +76,7 @@ export function Footer() {
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
               スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とする
-              バックエンドエンジニア。Go、Python、AWSを用いた高性能なWeb
+              エンジニア。Go、Python、AWSを用いた高性能なWeb
               アプリケーション開発に従事しています。
             </p>
             

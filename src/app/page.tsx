@@ -117,7 +117,7 @@ export default function Home() {
                   </h1>
                   <div className="text-xl md:text-2xl lg:text-3xl text-muted-foreground min-h-[3rem] flex items-center justify-center lg:justify-start">
                     <TypingAnimation 
-                      texts={["バックエンドエンジニア", "フルスタック開発者", "システムアーキテクト"]}
+                      texts={["エンジニア", "フルスタック開発者", "システムアーキテクト"]}
                       className="font-semibold"
                       typingSpeed={80}
                       deletingSpeed={40}
@@ -129,7 +129,7 @@ export default function Home() {
                 <div className="space-y-4 max-w-2xl">
                   <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                     顧客とのコミュニケーションを大切にし、要件定義から設計、実装、運用まで
-                    一貫して対応可能なバックエンドエンジニアです。
+                    一貫して対応可能なエンジニアです。
                   </p>
                   <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                     PHP、JavaScript、AWSを用いた開発で、
