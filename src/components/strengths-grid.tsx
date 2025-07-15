@@ -112,7 +112,7 @@ export function StrengthsGrid({ strengths, interests, certifications }: Strength
 
       {/* Certifications Section */}
       <div>
-        <h3 className="text-2xl font-bold mb-6 text-center">資格・証明書</h3>
+        <h3 className="text-2xl font-bold mb-6 text-center">資格</h3>
         
         {/* 有効な資格 */}
         <div className="space-y-4 mb-6">

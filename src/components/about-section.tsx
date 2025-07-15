@@ -165,34 +165,41 @@ const interestsData: Interest[] = [
 const certificationsData: Certification[] = [
   {
     id: "1",
-    name: "応用情報技術者試験",
-    issuer: "独立行政法人情報処理推進機構",
+    name: "応用情報技術者",
+    issuer: "独立行政法人 情報処理推進機構（IPA）",
     date: "2024年12月26日",
-    description: "ITエンジニアとしての応用的な知識とスキルの国家資格"
+    description: "情報処理技術分野の国家資格"
   },
   {
     id: "2",
-    name: "ファイナンシャルプランニング技能検定2級",
+    name: "2級 ファイナンシャル・プランニング技能士",
     issuer: "日本FP協会",
-    date: "2018年7月2日",
-    description: "ファイナンシャルプランニングに関する専門知識の資格"
+    date: "2018年10月22日",
+    description: "ファイナンシャルプランニングに関する国家資格"
   },
   {
     id: "3",
-    name: "ファイナンシャルプランニング技能検定3級",
+    name: "3級 ファイナンシャル・プランニング技能士",
     issuer: "日本FP協会",
-    date: "2018年7月2日",
-    description: "ファイナンシャルプランニングの基礎知識の資格"
+    date: "2018年6月29日",
+    description: "ファイナンシャルプランニングに関する国家資格"
   },
   {
     id: "4",
     name: "宅地建物取引士",
     issuer: "国土交通省",
-    date: "2016年12月2日",
-    description: "不動産取引に関する専門知識の国家資格"
+    date: "2016年11月30日",
+    description: "不動産取引業務に関する国家資格"
   },
   {
     id: "5",
+    name: "普通自動車第一種運転免許（AT限定）",
+    issuer: "公安委員会",
+    date: "2015年2月3日",
+    description: "自動車運転に関する国家資格"
+  },
+  {
+    id: "6",
     name: "CompTIA Security+",
     issuer: "CompTIA",
     date: "2021年10月31日",
@@ -200,7 +207,7 @@ const certificationsData: Certification[] = [
     expired: true
   },
   {
-    id: "6",
+    id: "7",
     name: "CompTIA Project+",
     issuer: "CompTIA",
     date: "2021年2月27日",
@@ -208,25 +215,23 @@ const certificationsData: Certification[] = [
     expired: true
   },
   {
-    id: "7",
+    id: "8",
     name: "AWS認定ソリューションアーキテクトアソシエイトレベル",
     issuer: "Amazon Web Services",
     date: "2021年1月31日",
     description: "AWSクラウドアーキテクチャの設計と実装に関する認定資格",
-    credentialId: "AWS-SAA-12345",
-    expired: true
-  },
-  {
-    id: "8",
-    name: "AWS認定クラウドプラクティショナーレベル",
-    issuer: "Amazon Web Services",
-    date: "2020年12月6日",
-    description: "AWS クラウドの基礎知識に関する認定資格",
-    credentialId: "AWS-CCP-67890",
     expired: true
   },
   {
     id: "9",
+    name: "AWS認定クラウドプラクティショナーレベル",
+    issuer: "Amazon Web Services",
+    date: "2020年12月6日",
+    description: "AWS クラウドの基礎知識に関する認定資格",
+    expired: true
+  },
+  {
+    id: "10",
     name: "Java SE 8 認定資格 OCJ-P Silver SE 8",
     issuer: "Oracle",
     date: "2020年8月23日",
