@@ -45,9 +45,7 @@ const timelineData: TimelineItem[] = [
       "携帯ショップの受付発見システムのフロントエンド開発",
     ],
     achievements: [
-      "レガシーシステムのモダンアーキテクチャへの移行を完了",
-      "自動テストカバレッジを20%から85%まで向上",
-      "決済システムのセキュリティ強化を実施"
+      "開発実務未経験ながら短期間での資格取得の姿勢を評価され、大手金融機関の開発業務にアサイン",
     ],
     skills: ["React", "Vue", "Laravel", "AWS"]
   },
@@ -60,7 +58,7 @@ const timelineData: TimelineItem[] = [
     description: [
       "都内高級賃貸住宅の仲介営業",
       "顧客要望から物件提案・案内・契約手続き・アフターフォローまでを担当",
-      "1組ごとの「なぜ借りたいか」に視点をあてたきめ細やかな接客を実施",
+      "1組ごとの「なぜ借りたいか」に視点をあてた接客を実施",
     ],
     achievements: [
       "医者、弁護士、スポーツ選手、社長などからの信頼を得ることができ、リピートや紹介を獲得",
@@ -89,44 +87,45 @@ const strengthsData: Strength[] = [
   {
     id: "1",
     title: "継続的学習",
-    description: "新しい技術やトレンドを積極的に学び、実際のプロジェクトに活用することで価値を創出します。",
+    description: "常に何かを学習していないと気が済まない性格です。",
     icon: <Zap className="w-6 h-6" />,
     color: "from-emerald-500 to-teal-500",
     examples: [
-      "不動産業界からの転職時は、スクールで1日10時間以上の学習を2ヶ月半継続し、ブログでのアウトプットも80日連続で行いました",
-      "不動産業界時代から業務に必要な資格以外も取得しており、足りない知識を補い続けてきました",
+      "不動産業界からの転職時は、スクールで1日10時間以上の学習を2ヶ月半継続し、ブログでのアウトプットも80日連続で行いました。",
+      "不動産業界時代から業務に必要な資格以外も取得しており、足りない知識を補い続けてきました。",
     ]
   },
   {
     id: "2",
-    title: "WIP",
-    description: "WIP",
+    title: "素直さ",
+    description: "いただいたアドバイスは「まずやってみる」を実践しています。",
     icon: <Users className="w-6 h-6" />,
     color: "from-blue-500 to-purple-500",
     examples: [
-      "WIP",
+      "この本良いよと教えてもらってから購入するまでに1分かかりません。",
     ]
   },
   {
     id: "3",
-    title: "WIP",
-    description: "WIP",
-    icon: <Zap className="w-6 h-6" />,
+    title: "胆力",
+    description: "1度でも経験してしまえばハードルが下がるので、まずは自分で経験してみることを大切にしています。",
+    icon: <Target className="w-6 h-6" />,
     color: "from-emerald-500 to-teal-500",
     examples: [
-      "WIP",
+      "2年前に「当たり前の基準を高めよう」というテーマをLT会で発表した際に、当時は最長15kmまでしか走った経験がなかったですがその場でフルマラソンに申し込んだことがきっかけで、今では42kmでも抵抗がなくなりました。",
     ]
   },
   {
     id: "4",
-    title: "WIP",
-    description: "WIP",
-    icon: <Target className="w-6 h-6" />,
-    color: "from-red-500 to-pink-500",
+    title: "文章力",
+    description: "多くの活字を読んでいることで、表現力豊かな文章に自信があります。",
+    icon: <Book className="w-6 h-6" />,
+    color: "from-emerald-500 to-teal-500",
     examples: [
-      "WIP"
+      "ブログ執筆が全く苦ではなく、会社で運営しているテックブログで社内1位のビュー数を獲得しました。",
+      "誤字脱字は見逃すことができない性格です。",
     ]
-  }
+  },
 ];
 
 const interestsData: Interest[] = [
@@ -139,7 +138,7 @@ const interestsData: Interest[] = [
   {
     id: "2",
     title: "セキュリティ",
-    description: "情報処理安全確保支援士に挑戦中(後4点で落ちたので、午後試験対策を強化中です)。",
+    description: "情報処理安全確保支援士に挑戦中(後4点で落ちたので、午後試験対策を強化中です)。セキュリティを理解するには膨大な知識が必要ですが、ハードルが高いからこそ挑戦しがいがあります。",
     icon: <Wine className="w-8 h-8" />
   },
   {
