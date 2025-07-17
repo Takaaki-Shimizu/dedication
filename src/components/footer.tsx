@@ -125,7 +125,6 @@ export function Footer() {
                     <Icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
                     <div>
                       <div className="font-medium">{social.name}</div>
-                      <div className="text-xs text-muted-foreground">{social.description}</div>
                     </div>
                   </Link>
                 );
