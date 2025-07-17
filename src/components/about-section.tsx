@@ -89,30 +89,6 @@ const timelineData: TimelineItem[] = [
 const strengthsData: Strength[] = [
   {
     id: "1",
-    title: "言葉",
-    description: "相手に届ける言葉を選ぶのが得意です。",
-    icon: <Lightbulb className="w-6 h-6" />,
-    color: "from-yellow-500 to-orange-500",
-    examples: [
-      "レガシーシステムのパフォーマンス問題を根本から解決",
-      "複雑な業務要件を技術仕様に落とし込み",
-      "障害発生時の迅速な原因特定と対策実施"
-    ]
-  },
-  {
-    id: "2",
-    title: "チームワーク",
-    description: "多様なバックグラウンドを持つメンバーとの協働を通じて、チーム全体のパフォーマンス向上に貢献します。",
-    icon: <Users className="w-6 h-6" />,
-    color: "from-blue-500 to-purple-500",
-    examples: [
-      "新入社員のメンタリングと技術指導",
-      "クロスファンクショナルチームでのプロジェクト推進",
-      "知識共有セッションの企画・実施"
-    ]
-  },
-  {
-    id: "3",
     title: "継続的学習",
     description: "新しい技術やトレンドを積極的に学び、実際のプロジェクトに活用することで価値を創出します。",
     icon: <Zap className="w-6 h-6" />,
@@ -123,15 +99,33 @@ const strengthsData: Strength[] = [
     ]
   },
   {
+    id: "2",
+    title: "WIP",
+    description: "WIP",
+    icon: <Users className="w-6 h-6" />,
+    color: "from-blue-500 to-purple-500",
+    examples: [
+      "WIP",
+    ]
+  },
+  {
+    id: "3",
+    title: "WIP",
+    description: "WIP",
+    icon: <Zap className="w-6 h-6" />,
+    color: "from-emerald-500 to-teal-500",
+    examples: [
+      "WIP",
+    ]
+  },
+  {
     id: "4",
-    title: "品質への拘り",
-    description: "コードの品質、システムの信頼性、ユーザー体験の向上に常に注力しています。",
+    title: "WIP",
+    description: "WIP",
     icon: <Target className="w-6 h-6" />,
     color: "from-red-500 to-pink-500",
     examples: [
-      "包括的なテスト戦略の策定と実施",
-      "コードレビューの品質向上とベストプラクティス共有",
-      "監視・アラートシステムの構築"
+      "WIP"
     ]
   }
 ];
@@ -260,8 +254,7 @@ export function AboutSection() {
             経歴 & プロフィール
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            これまでの学習と実務経験を通じて培った技術力と、
-            エンジニアとしての価値観や人となりをご紹介します。
+            価値観や人となりをご紹介します。
           </p>
         </div>
 

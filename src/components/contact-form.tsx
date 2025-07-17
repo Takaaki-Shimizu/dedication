@@ -122,7 +122,7 @@ export function ContactForm() {
         </div>
         <CardTitle className="text-2xl md:text-3xl">お問い合わせ</CardTitle>
         <CardDescription className="text-lg">
-          お仕事のご相談、技術に関するご質問など、お気軽にお問い合わせください
+          お気軽にお問い合わせください
         </CardDescription>
       </CardHeader>
 

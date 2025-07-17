@@ -17,25 +17,21 @@ const socialLinks = [
     name: "GitHub",
     href: "https://github.com/Takaaki-Shimizu",
     icon: Github,
-    description: "コードとプロジェクト"
   },
   {
     name: "LinkedIn", 
     href: "https://linkedin.com/in/takaaki-shimizu-3813a7375",
     icon: Linkedin,
-    description: "プロフェッショナルネットワーク"
   },
   {
     name: "X (Twitter)",
     href: "https://x.com/ilsbt", 
     icon: Twitter,
-    description: "技術情報とアップデート"
   },
   {
     name: "Email",
     href: "mailto:57.shimizu.takaaki@gmail.com",
     icon: Mail,
-    description: "直接連絡"
   }
 ];
 
@@ -71,13 +67,12 @@ export function Footer() {
               </div>
               <div>
                 <h3 className="font-bold text-xl">清水 隆亮</h3>
-                <p className="text-sm text-muted-foreground">Backend Engineer</p>
+                <p className="text-sm text-muted-foreground">Engineer</p>
               </div>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
-              スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とする
-              エンジニア。Go、Python、AWSを用いた高性能なWeb
-              アプリケーション開発に従事しています。
+              顧客とのコミュニケーションを大切にし、要件定義から設計、実装、運用まで行うエンジニアです。
+              「顧客が心から欲しいプロダクトを届ける」を信条として、 エンジニアのロールにとどまらない動きを心がけています。
             </p>
             
             {/* Contact Info */}

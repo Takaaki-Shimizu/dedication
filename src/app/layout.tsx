@@ -10,7 +10,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Takaaki Shimizu | Backend Engineer Portfolio",
+    default: "Takaaki Shimizu | Engineer Portfolio",
     template: "%s | Takaaki Shimizu",
   },
   description: "スケーラブルなシステム構築とクラウドアーキテクチャ設計を専門とするエンジニア。Go、Python、AWSを用いた高性能なWebアプリケーション開発に従事。",

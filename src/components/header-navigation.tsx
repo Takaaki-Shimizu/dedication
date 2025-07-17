@@ -170,7 +170,7 @@ export function HeaderNavigation() {
                   {/* Mobile Footer */}
                   <div className="mt-auto pt-6 border-t">
                     <p className="text-sm text-muted-foreground text-center">
-                      Backend Engineer Portfolio
+                      Engineer Portfolio
                     </p>
                   </div>
                 </div>

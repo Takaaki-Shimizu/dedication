@@ -1,4 +1,4 @@
-# Backend Engineer Portfolio - CLAUDE.md
+# Engineer Portfolio - CLAUDE.md
 
 ## プロジェクト概要
 

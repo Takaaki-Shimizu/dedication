@@ -14,15 +14,15 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Takaaki Shimizu",
-  "jobTitle": "Backend Engineer",
-  "description": "Backend engineer specializing in scalable systems, cloud architecture, and modern development practices.",
+  "jobTitle": "Engineer",
+  "description": "engineer specializing in scalable systems, cloud architecture, and modern development practices.",
   "url": "https://dedication.vercel.app",
   "sameAs": [
     "https://github.com/Takaaki-Shimizu",
     "https://www.linkedin.com/in/takaaki-shimizu-3813a7375"
   ],
   "knowsAbout": [
-    "Backend Development",
+    "Development",
     "Cloud Architecture", 
     "Go Programming",
     "Python",
@@ -47,9 +47,7 @@ const skillsData = {
     icon: <Globe className="h-6 w-6 text-white" />,
     color: "from-indigo-600 to-indigo-700",
     skills: [
-      { name: "React", level: 88, years: 4, description: "モダンなUI開発、状態管理、パフォーマンス最適化" },
-      { name: "TypeScript", level: 92, years: 4, description: "型安全なコード開発、大規模アプリケーションの保守性向上" },
-      { name: "Next.js", level: 85, years: 2, description: "SSR、SSG、フルスタック開発、SEO最適化" }
+      { name: "React", level: 40, years: 1, description: "WIP" },
     ]
   },
   database: {
@@ -57,16 +55,15 @@ const skillsData = {
     icon: <Database className="h-6 w-6 text-white" />,
     color: "from-slate-600 to-slate-700",
     skills: [
-      { name: "MySQL", level: 85, years: 4, description: "データベース設計、インデックス最適化、トランザクション管理" },
+      { name: "MySQL", level: 50, years: 3, description: "WIP" },
     ]
   },
   infrastructure: {
-    title: "インフラ・DevOps",
+    title: "インフラ",
     icon: <Cloud className="h-6 w-6 text-white" />,
     color: "from-purple-600 to-purple-700",
     skills: [
-      { name: "AWS", level: 88, years: 4, description: "EC2、ECS、Lambda、RDS、S3等を使ったクラウドアーキテクチャ設計" },
-      { name: "Docker", level: 90, years: 4, description: "コンテナ化、マルチステージビルド、開発環境の標準化" },
+      { name: "AWS", level: 50, years: 3, description: "WIP" },
     ]
   },
   tools: {
@@ -74,9 +71,7 @@ const skillsData = {
     icon: <Wrench className="h-6 w-6 text-white" />,
     color: "from-teal-600 to-teal-700",
     skills: [
-      { name: "Git", level: 95, years: 6, description: "ブランチ戦略、コードレビュー、チーム開発ワークフロー" },
-      { name: "CI/CD", level: 85, years: 3, description: "GitHub Actions、GitLab CI、自動テスト・デプロイパイプライン" },
-      { name: "API設計", level: 90, years: 4, description: "RESTful API、GraphQL、OpenAPI仕様書作成、APIセキュリティ" }
+      { name: "Git", level: 90, years: 6, description: "ブランチ戦略、コードレビュー、チーム開発ワークフロー" },
     ]
   }
 };
@@ -128,8 +123,8 @@ export default function Home() {
 
                 <div className="space-y-4 max-w-2xl">
                   <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                    顧客とのコミュニケーションを大切にし、要件定義から設計、実装、運用まで
-                    一貫して対応可能なエンジニアです。
+                    顧客とのコミュニケーションを大切にし、
+                    要件定義から設計、実装、運用まで行うエンジニアです。
                   </p>
                   <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                     「顧客が心から欲しいプロダクトを届ける」を信条として、
@@ -142,19 +137,19 @@ export default function Home() {
                   <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-8 py-6 text-lg shadow-lg hover:shadow-xl magnetic-button">
                     <Link href="#contact">
                       <Mail className="mr-2 h-5 w-5" />
-                      お問い合わせ
+                      お問い合わせ(WIP)
                     </Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-2 border-blue-600/20 hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/20 font-semibold px-8 py-6 text-lg magnetic-button">
                     <Link href="#projects">
                       <ExternalLink className="mr-2 h-5 w-5" />
-                      作品を見る
+                      作品を見る(WIP)
                     </Link>
                   </Button>
                   <Button asChild variant="ghost" size="lg" className="font-semibold px-8 py-6 text-lg hover:bg-slate-100 dark:hover:bg-slate-800 magnetic-button">
                     <Link href="/resume.pdf">
                       <Download className="mr-2 h-5 w-5" />
-                      履歴書
+                      履歴書(WIP)
                     </Link>
                   </Button>
                 </div>
@@ -294,11 +289,10 @@ export default function Home() {
             {/* Section Header */}
             <div className="text-center mb-16 animate-fade-in-up">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-700 dark:from-slate-100 dark:via-blue-200 dark:to-indigo-300 bg-clip-text text-transparent">
-                お問い合わせ
+                お問い合わせ(WIP)
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                お仕事のご相談、技術に関するご質問、プロジェクトについてのディスカッションなど、
-                どのような内容でもお気軽にお問い合わせください。
+                WIP
               </p>
             </div>
 
@@ -339,7 +333,6 @@ export default function Home() {
                   </div>
                   <h4 className="font-semibold mb-2">メール</h4>
                   <p className="text-sm text-muted-foreground">57.shimizu.takaaki@gmail.com</p>
-                  <p className="text-xs text-muted-foreground mt-1">24時間以内に返信</p>
                 </div>
                 
                 <div className="text-center">
@@ -348,7 +341,6 @@ export default function Home() {
                   </div>
                   <h4 className="font-semibold mb-2">GitHub</h4>
                   <p className="text-sm text-muted-foreground">@takaakishimizu</p>
-                  <p className="text-xs text-muted-foreground mt-1">コードとプロジェクト</p>
                 </div>
                 
                 <div className="text-center">
@@ -357,7 +349,6 @@ export default function Home() {
                   </div>
                   <h4 className="font-semibold mb-2">LinkedIn</h4>
                   <p className="text-sm text-muted-foreground">Takaaki Shimizu</p>
-                  <p className="text-xs text-muted-foreground mt-1">プロフェッショナルネットワーク</p>
                 </div>
               </div>
             </div>
