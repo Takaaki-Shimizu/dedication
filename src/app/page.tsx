@@ -152,6 +152,12 @@ export default function Home() {
                       履歴書(WIP)
                     </Link>
                   </Button>
+                  <Button asChild variant="ghost" size="lg" className="font-semibold px-8 py-6 text-lg hover:bg-slate-100 dark:hover:bg-slate-800 magnetic-button">
+                    <Link href="https://lookerstudio.google.com/reporting/1146a000-4d69-4aca-8c73-671aac4fb28f" target="_blank">
+                      <ExternalLink className="mr-2 h-5 w-5" />
+                      ランニング記録
+                    </Link>
+                  </Button>
                 </div>
 
                 {/* Social Links */}
