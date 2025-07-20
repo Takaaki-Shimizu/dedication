@@ -32,7 +32,7 @@ const structuredData = {
   ]
 };
 
-const skillsData = {
+const SKILLS_DATA = {
   backend: {
     title: "バックエンド",
     icon: <Server className="h-6 w-6 text-white" />,
@@ -213,10 +213,10 @@ export default function Home() {
               {/* Backend Skills */}
               <div className="lg:col-span-1">
                 <SkillCard
-                  title={skillsData.backend.title}
-                  icon={skillsData.backend.icon}
-                  skills={skillsData.backend.skills}
-                  color={skillsData.backend.color}
+                  title={SKILLS_DATA.backend.title}
+                  icon={SKILLS_DATA.backend.icon}
+                  skills={SKILLS_DATA.backend.skills}
+                  color={SKILLS_DATA.backend.color}
                   delay={0}
                 />
               </div>
@@ -224,10 +224,10 @@ export default function Home() {
               {/* Frontend Skills */}
               <div className="lg:col-span-1">
                 <SkillCard
-                  title={skillsData.frontend.title}
-                  icon={skillsData.frontend.icon}
-                  skills={skillsData.frontend.skills}
-                  color={skillsData.frontend.color}
+                  title={SKILLS_DATA.frontend.title}
+                  icon={SKILLS_DATA.frontend.icon}
+                  skills={SKILLS_DATA.frontend.skills}
+                  color={SKILLS_DATA.frontend.color}
                   delay={200}
                 />
               </div>
@@ -235,10 +235,10 @@ export default function Home() {
               {/* Database Skills */}
               <div className="lg:col-span-1 xl:col-span-1">
                 <SkillCard
-                  title={skillsData.database.title}
-                  icon={skillsData.database.icon}
-                  skills={skillsData.database.skills}
-                  color={skillsData.database.color}
+                  title={SKILLS_DATA.database.title}
+                  icon={SKILLS_DATA.database.icon}
+                  skills={SKILLS_DATA.database.skills}
+                  color={SKILLS_DATA.database.color}
                   delay={400}
                 />
               </div>
@@ -246,10 +246,10 @@ export default function Home() {
               {/* Infrastructure Skills */}
               <div className="lg:col-span-1">
                 <SkillCard
-                  title={skillsData.infrastructure.title}
-                  icon={skillsData.infrastructure.icon}
-                  skills={skillsData.infrastructure.skills}
-                  color={skillsData.infrastructure.color}
+                  title={SKILLS_DATA.infrastructure.title}
+                  icon={SKILLS_DATA.infrastructure.icon}
+                  skills={SKILLS_DATA.infrastructure.skills}
+                  color={SKILLS_DATA.infrastructure.color}
                   delay={600}
                 />
               </div>
@@ -257,10 +257,10 @@ export default function Home() {
               {/* Tools & Methodologies */}
               <div className="lg:col-span-1 xl:col-span-2">
                 <SkillCard
-                  title={skillsData.tools.title}
-                  icon={skillsData.tools.icon}
-                  skills={skillsData.tools.skills}
-                  color={skillsData.tools.color}
+                  title={SKILLS_DATA.tools.title}
+                  icon={SKILLS_DATA.tools.icon}
+                  skills={SKILLS_DATA.tools.skills}
+                  color={SKILLS_DATA.tools.color}
                   delay={800}
                 />
               </div>

@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { Star } from "lucide-react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 interface Skill {
   name: string;
@@ -22,7 +22,7 @@ interface SkillCardProps {
   delay?: number;
 }
 
-const StarRating = ({ rating }: { rating: number }) => {
+const StarRating = React.memo(({ rating }: { rating: number }) => {
   return (
     <div className="flex gap-1">
       {[1, 2, 3, 4, 5].map((star) => (
@@ -37,11 +37,17 @@ const StarRating = ({ rating }: { rating: number }) => {
       ))}
     </div>
   );
-};
+});
 
-export function SkillCard({ title, icon, skills, color, delay = 0 }: SkillCardProps) {
+StarRating.displayName = 'StarRating';
+
+export const SkillCard = React.memo(({ title, icon, skills, color, delay = 0 }: SkillCardProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [animatedLevels, setAnimatedLevels] = useState<number[]>(new Array(skills.length).fill(0));
+
+  const getStarRating = useCallback((level: number) => {
+    return Math.ceil(level / 20); // Convert 0-100 to 1-5 stars
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -60,10 +66,6 @@ export function SkillCard({ title, icon, skills, color, delay = 0 }: SkillCardPr
 
     return () => clearTimeout(timer);
   }, [skills, delay]);
-
-  const getStarRating = (level: number) => {
-    return Math.ceil(level / 20); // Convert 0-100 to 1-5 stars
-  };
 
   return (
     <Card 
@@ -113,4 +115,6 @@ export function SkillCard({ title, icon, skills, color, delay = 0 }: SkillCardPr
       </CardContent>
     </Card>
   );
-}
+});
+
+SkillCard.displayName = 'SkillCard';
