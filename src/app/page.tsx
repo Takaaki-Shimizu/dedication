@@ -147,9 +147,9 @@ export default function Home() {
                     </Link>
                   </Button>
                   <Button asChild variant="ghost" size="lg" className="font-semibold px-8 py-6 text-lg hover:bg-slate-100 dark:hover:bg-slate-800 magnetic-button">
-                    <Link href="/resume.pdf">
+                    <Link href="/resume">
                       <Download className="mr-2 h-5 w-5" />
-                      履歴書(WIP)
+                      履歴書
                     </Link>
                   </Button>
                   <Button asChild variant="ghost" size="lg" className="font-semibold px-8 py-6 text-lg hover:bg-slate-100 dark:hover:bg-slate-800 magnetic-button">
