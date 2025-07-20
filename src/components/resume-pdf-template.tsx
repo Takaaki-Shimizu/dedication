@@ -1,6 +1,32 @@
 import React from 'react';
-import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+import { Document, Page, Text, View, StyleSheet, Font } from '@react-pdf/renderer';
 import { ResumeData } from '@/types/resume';
+
+// Register Japanese font with fallback strategy
+let fontRegistered = false;
+const registerJapaneseFont = () => {
+  if (fontRegistered) return;
+  
+  try {
+    // Use jsDelivr CDN for reliable font hosting
+    Font.register({
+      family: 'NotoSansJP',
+      src: 'https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-jp@5.0.12/files/noto-sans-jp-japanese-400-normal.woff',
+    });
+    fontRegistered = true;
+  } catch {
+    try {
+      // Fallback: use different source
+      Font.register({
+        family: 'NotoSansJP',  
+        src: 'https://fonts.gstatic.com/s/notosansjp/v52/nKKF-GM_FYFRMMQpXmM_Gf7l_CfZ3lWeSJhNLIZQNNNOoWv-LO5I6oaF.woff',
+      });
+      fontRegistered = true;
+    } catch (fallbackError) {
+      console.warn('Japanese font registration failed completely:', fallbackError);
+    }
+  }
+};
 
 const styles = StyleSheet.create({
   page: {
@@ -8,7 +34,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     padding: 20,
     fontSize: 10,
-    fontFamily: 'Helvetica',
+    fontFamily: 'NotoSansJP',
   },
   title: {
     fontSize: 16,
@@ -78,7 +104,11 @@ interface ResumePDFTemplateProps {
   data: ResumeData;
 }
 
-export const ResumePDFTemplate: React.FC<ResumePDFTemplateProps> = ({ data }) => (
+export const ResumePDFTemplate: React.FC<ResumePDFTemplateProps> = ({ data }) => {
+  // Register font when component is used
+  registerJapaneseFont();
+  
+  return (
   <Document>
     <Page size="A4" style={styles.page}>
       <Text style={styles.title}>履歴書</Text>
@@ -243,4 +273,5 @@ export const ResumePDFTemplate: React.FC<ResumePDFTemplateProps> = ({ data }) =>
       </View>
     </Page>
   </Document>
-);
+  );
+};
