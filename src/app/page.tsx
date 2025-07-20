@@ -7,7 +7,7 @@ import { AboutSection } from "@/components/about-section";
 import { ContactForm } from "@/components/contact-form";
 import { HeaderNavigation } from "@/components/header-navigation";
 import { Footer } from "@/components/footer";
-import { Github, Linkedin, Mail, ExternalLink, Server, Database, Cloud, X as Twitter, MapPin, Download, Globe, Wrench, Star } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Server, Database, Cloud, X as Twitter, Languages, Download, Globe, Wrench, Star } from "lucide-react";
 import Link from "next/link";
 
 const structuredData = {
@@ -104,8 +104,8 @@ export default function Home() {
               <div className="text-center lg:text-left space-y-6 animate-fade-in-left">
                 <div className="space-y-2">
                   <p className="text-sm uppercase tracking-wider text-muted-foreground font-medium">
-                    <MapPin className="inline w-4 h-4 mr-1" />
-                    埼玉県
+                    <Languages className="inline w-4 h-4 mr-1" />
+                    Shimizu Takaaki
                   </p>
                   <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-700 dark:from-slate-100 dark:via-blue-200 dark:to-indigo-300 bg-clip-text text-transparent leading-tight">
                     清水 隆亮
