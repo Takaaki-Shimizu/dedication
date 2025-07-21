@@ -12,16 +12,18 @@ echo "📅 Timestamp: $TIMESTAMP"
 
 # Generate SPDX SBOM with Syft
 echo "📋 Generating SPDX SBOM..."
-syft . \
+syft scan . \
   --output spdx-json=./sbom/sbom-syft.spdx.json \
-  --name "dedication-portfolio" \
+  --source-name "dedication-portfolio" \
+  --source-version "0.1.0" \
   --quiet
 
 # Generate CycloneDX SBOM with Syft
 echo "🔄 Generating CycloneDX SBOM..."
-syft . \
+syft scan . \
   --output cyclonedx-json=./sbom/sbom-syft.cyclonedx.json \
-  --name "dedication-portfolio" \
+  --source-name "dedication-portfolio" \
+  --source-version "0.1.0" \
   --quiet
 
 # Verify generated files
