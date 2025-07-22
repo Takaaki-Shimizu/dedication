@@ -1,0 +1,36 @@
+sbom:
+  project:
+    name: "dedication-portfolio"
+    version: "0.1.0"
+    supplier: "Dedication Portfolio Team"
+    namespace: "https://github.com/Takaaki-Shimizu/dedication"
+  
+  generation:
+    tools:
+      primary: "syft"
+      secondary: "npm-sbom" 
+    formats:
+      - "spdx-json"
+      - "cyclonedx-json"
+    output_dir: "./sbom"
+  
+  validation:
+    schema_check: true
+    format_check: true
+    completeness_check: true
+
+metadata:
+  creator: "GitHub Actions + Syft"
+  license_list_version: "3.21"
+  document_namespace_prefix: "https://github.com/Takaaki-Shimizu/dedication/sbom"
+
+exclusions:
+  # Development dependencies are excluded from production SBOM
+  dev_dependencies: false
+  # Test files and directories
+  paths:
+    - "**/*.test.js"
+    - "**/*.spec.js"
+    - "**/test/**"
+    - "**/tests/**"
+    - "**/__tests__/**"

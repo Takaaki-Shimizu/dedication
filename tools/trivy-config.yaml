@@ -1,0 +1,46 @@
+vulnerability:
+  databases:
+    - ghsa        # GitHub Security Advisory Database
+    - osv         # Open Source Vulnerabilities
+    - nvd         # National Vulnerability Database
+  
+  severity:
+    - CRITICAL
+    - HIGH
+    - MEDIUM
+    - LOW
+  
+  output:
+    format: json
+    file: vulnerability-report.json
+    sarif_file: vulnerability-report.sarif
+
+scanning:
+  # Scan configuration
+  timeout: "10m"
+  parallel: 4
+  
+  # File types to scan
+  scanners:
+    - vuln        # Vulnerability scanning
+    - secret      # Secret scanning
+    - misconfig   # Misconfiguration scanning
+  
+  # Skip specific vulnerabilities (if needed)
+  skip_update: false
+  skip_java_db_update: false
+  
+  # Ignore unfixed vulnerabilities
+  ignore_unfixed: false
+
+reporting:
+  # VEX document configuration
+  vex:
+    enabled: true
+    format: "cyclonedx"
+    output: "vex-document.json"
+  
+  # Report filtering
+  filter:
+    exclude_dev_deps: true
+    min_severity: "LOW"
