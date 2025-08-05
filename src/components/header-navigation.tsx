@@ -11,7 +11,6 @@ const navigationItems = [
   { name: "About", href: "#about", label: "経歴・プロフィール" },
   { name: "Skills", href: "#skills", label: "技術スタック" },
   { name: "Projects", href: "#projects", label: "プロジェクト" },
-  { name: "Contact", href: "#contact", label: "お問い合わせ" },
 ];
 
 export function HeaderNavigation() {

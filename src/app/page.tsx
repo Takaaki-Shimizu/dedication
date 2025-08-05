@@ -4,10 +4,9 @@ import { TypingAnimation } from "@/components/typing-animation";
 import { SkillCard } from "@/components/skill-card";
 import { ProjectsSection } from "@/components/projects-section";
 import { AboutSection } from "@/components/about-section";
-import { ContactForm } from "@/components/contact-form";
 import { HeaderNavigation } from "@/components/header-navigation";
 import { Footer } from "@/components/footer";
-import { Github, Linkedin, Mail, ExternalLink, Server, Database, Cloud, X as Twitter, Languages, Download, Globe, Wrench, Star } from "lucide-react";
+import { Github, Linkedin, ExternalLink, Server, Database, Cloud, X as Twitter, Languages, Download, Globe, Wrench, Star } from "lucide-react";
 import Link from "next/link";
 
 const structuredData = {
@@ -134,12 +133,6 @@ export default function Home() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                  <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-8 py-6 text-lg shadow-lg hover:shadow-xl magnetic-button">
-                    <Link href="#contact">
-                      <Mail className="mr-2 h-5 w-5" />
-                      お問い合わせ(WIP)
-                    </Link>
-                  </Button>
                   <Button asChild variant="outline" size="lg" className="border-2 border-blue-600/20 hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/20 font-semibold px-8 py-6 text-lg magnetic-button">
                     <Link href="#projects">
                       <ExternalLink className="mr-2 h-5 w-5" />
@@ -286,80 +279,6 @@ export default function Home() {
         {/* Projects Section */}
         <ProjectsSection />
 
-        {/* Contact Section */}
-        <section id="contact" className="py-20 bg-gradient-to-br from-slate-50/50 to-white dark:from-slate-900/50 dark:to-slate-900 relative">
-          {/* Background decoration */}
-          <div className="absolute inset-0 bg-dots-pattern opacity-5"></div>
-          
-          <div className="container mx-auto px-4 relative z-10">
-            {/* Section Header */}
-            <div className="text-center mb-16 animate-fade-in-up">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-700 dark:from-slate-100 dark:via-blue-200 dark:to-indigo-300 bg-clip-text text-transparent">
-                お問い合わせ(WIP)
-              </h2>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                WIP
-              </p>
-            </div>
-
-            {/* Contact Form */}
-            <div className="animate-fade-in-up" style={{ animationDelay: "200ms" }}>
-              <ContactForm />
-            </div>
-
-            {/* Alternative Contact Methods */}
-            <div className="mt-16 text-center animate-fade-in-up" style={{ animationDelay: "400ms" }}>
-              <h3 className="text-xl font-semibold mb-6">その他の連絡方法</h3>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
-                <Button asChild variant="outline" size="lg" className="border-2 border-blue-600/20 hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/20 magnetic-button min-w-[160px]">
-                  <Link href="mailto:57.shimizu.takaaki@gmail.com">
-                    <Mail className="mr-2 h-5 w-5" />
-                    直接メール
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="border-2 border-blue-600/20 hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/20 magnetic-button min-w-[160px]">
-                  <Link href="https://github.com/Takaaki-Shimizu" target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-5 w-5" />
-                    GitHub
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="border-2 border-blue-600/20 hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/20 magnetic-button min-w-[160px]">
-                  <Link href="https://linkedin.com/in/takaaki-shimizu-3813a7375" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="mr-2 h-5 w-5" />
-                    LinkedIn
-                  </Link>
-                </Button>
-              </div>
-              
-              {/* Contact Info */}
-              <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <h4 className="font-semibold mb-2">メール</h4>
-                  <p className="text-sm text-muted-foreground">57.shimizu.takaaki@gmail.com</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-r from-slate-600 to-slate-700 rounded-full flex items-center justify-center shadow-lg">
-                    <Github className="w-6 h-6 text-white" />
-                  </div>
-                  <h4 className="font-semibold mb-2">GitHub</h4>
-                  <p className="text-sm text-muted-foreground">@takaakishimizu</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
-                    <Linkedin className="w-6 h-6 text-white" />
-                  </div>
-                  <h4 className="font-semibold mb-2">LinkedIn</h4>
-                  <p className="text-sm text-muted-foreground">Takaaki Shimizu</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       
       {/* Footer */}
