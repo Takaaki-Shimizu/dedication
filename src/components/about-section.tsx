@@ -1,7 +1,7 @@
 "use client";
 
 import { Timeline, type TimelineItem } from "./timeline";
-import { StrengthsGrid, type Strength, type Interest, type Certification } from "./strengths-grid";
+import { StrengthsGrid, type Strength, type Interest, type Certification, type SpeakingHistory } from "./strengths-grid";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -239,6 +239,21 @@ const certificationsData: Certification[] = [
   },
 ];
 
+const speakingHistoryData: SpeakingHistory[] = [
+  {
+    id: "1",
+    title: "実演！CSVダウンロードパフォーマンス改善",
+    event: "PHPerKaigi 2025",
+    videoUrl: "https://www.youtube.com/embed/u0TJg42B37E?si=rq1e3Enk1bI4q4Hq"
+  },
+  {
+    id: "2", 
+    title: "障害率が圧倒的に高い、テストコードが存在しないプロダクトへの導入戦略",
+    event: "PHPerKaigi 2024",
+    videoUrl: "https://www.youtube.com/embed/34cYJ5QM1FM?si=FEcoG5-z0J856erg"
+  }
+];
+
 export function AboutSection() {
   return (
     <section id="about" className="py-20 bg-gradient-to-br from-muted/10 to-background relative">
@@ -302,6 +317,7 @@ export function AboutSection() {
               strengths={strengthsData}
               interests={interestsData}
               certifications={certificationsData}
+              speakingHistory={speakingHistoryData}
             />
           </div>
 
