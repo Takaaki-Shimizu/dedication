@@ -33,13 +33,22 @@ export interface Certification {
   expired?: boolean;
 }
 
+export interface SpeakingHistory {
+  id: string;
+  title: string;
+  event: string;
+  videoUrl: string;
+  description?: string;
+}
+
 interface StrengthsGridProps {
   strengths: Strength[];
   interests: Interest[];
   certifications: Certification[];
+  speakingHistory: SpeakingHistory[];
 }
 
-export function StrengthsGrid({ strengths, interests, certifications }: StrengthsGridProps) {
+export function StrengthsGrid({ strengths, interests, certifications, speakingHistory }: StrengthsGridProps) {
   const [showExpiredCerts, setShowExpiredCerts] = useState(false);
 
   // 資格を有効と期限切れに分ける
@@ -78,6 +87,43 @@ export function StrengthsGrid({ strengths, interests, certifications }: Strength
                     </p>
                   ))}
                 </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      {/* Speaking History Section */}
+      <div>
+        <h3 className="text-2xl font-bold mb-6 text-center">登壇歴</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {speakingHistory.map((talk, index) => (
+            <Card 
+              key={talk.id}
+              className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-background to-muted/20 border-2 animate-fade-in-up"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <CardHeader className="pb-4">
+                <CardTitle className="text-lg mb-2">{talk.title}</CardTitle>
+                <p className="text-sm text-muted-foreground">{talk.event}</p>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <div className="aspect-video w-full">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={talk.videoUrl}
+                    title={talk.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="rounded-lg"
+                  />
+                </div>
+                {talk.description && (
+                  <p className="text-sm text-muted-foreground mt-4">{talk.description}</p>
+                )}
               </CardContent>
             </Card>
           ))}
