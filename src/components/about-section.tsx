@@ -290,7 +290,7 @@ export function AboutSection() {
                 <h3 className="text-xl font-bold mb-6">自己紹介</h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    継続力に自信があり、毎月100km以上のランニング(11ヶ月連続継続中)や、毎年春秋にあるIPA高度資格試験学習を通した体系的な知識獲得を進めています。
+                    継続力に自信があり、毎月100km以上のランニング(12ヶ月連続継続中)や、毎年春秋にあるIPA高度資格試験学習を通した体系的な知識獲得を進めています。
                     また、目標の達成のために「あえてやらない」ことも大切にし、17年続けた卓球をお休みしてマラソンの練習に集中しています。
                   </p>
                 </div>
