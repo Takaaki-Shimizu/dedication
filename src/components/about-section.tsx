@@ -1,8 +1,16 @@
 "use client";
 
 import { Timeline, type TimelineItem } from "./timeline";
-import { StrengthsGrid, type Strength, type Interest, type Certification, type SpeakingHistory } from "./strengths-grid";
-import { Card, CardContent } from "@/components/ui/card";
+import { StrengthsGrid, type Strength, type Interest, type Certification } from "./strengths-grid";
+
+export interface SpeakingHistory {
+  id: string;
+  title: string;
+  event: string;
+  videoUrl: string;
+  description?: string;
+}
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
   Users, 
@@ -276,28 +284,48 @@ export function AboutSection() {
           
           {/* Left Column - Profile & Introduction */}
           <div className="space-y-12">
-            {/* Profile Card */}
-            <Card className="bg-gradient-to-br from-background to-muted/20 border-2">
-              <CardContent className="p-8">
-                <div className="flex flex-col sm:flex-row items-center gap-6">                  
-                  <div className="text-center sm:text-left flex-1">
-                    <h3 className="text-2xl font-bold mb-2">清水 隆亮</h3>
-                    <p className="text-lg text-muted-foreground mb-4">エンジニア</p>
-                    <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
-                      <Badge className="bg-emerald-100 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300">
-                         PHP
-                      </Badge>
-                      <Badge className="bg-blue-100 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300">
-                        JavaScript
-                      </Badge>
-                      <Badge className="bg-orange-100 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300">
-                        AWS
-                      </Badge>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            {/* Timeline */}
+            <div>
+              <h3 className="text-2xl font-bold mb-8 text-center lg:text-left">経歴タイムライン</h3>
+              <Timeline items={timelineData} />
+            </div>
+
+            {/* Speaking History Section */}
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-center">登壇歴</h3>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {speakingHistoryData.map((talk, index) => (
+                  <Card 
+                    key={talk.id}
+                    className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-background to-muted/20 border-2 animate-fade-in-up"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-lg mb-2">{talk.title}</CardTitle>
+                      <p className="text-sm text-muted-foreground">{talk.event}</p>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="aspect-video w-full">
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src={talk.videoUrl}
+                          title={talk.title}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                          className="rounded-lg"
+                        />
+                      </div>
+                      {talk.description && (
+                        <p className="text-sm text-muted-foreground mt-4">{talk.description}</p>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
 
             {/* Detailed Introduction */}
             <Card className="bg-gradient-to-br from-background to-muted/20 border-2">
@@ -306,6 +334,8 @@ export function AboutSection() {
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
                     継続力に自信があり、毎月100km以上のランニング(12ヶ月連続継続中)や、毎年春秋にあるIPA高度資格試験学習を通した体系的な知識獲得を進めています。
+                  </p>
+                  <p>
                     また、目標の達成のために「あえてやらない」ことも大切にし、17年続けた卓球をお休みしてマラソンの練習に集中しています。
                   </p>
                 </div>
@@ -317,14 +347,11 @@ export function AboutSection() {
               strengths={strengthsData}
               interests={interestsData}
               certifications={certificationsData}
-              speakingHistory={speakingHistoryData}
             />
           </div>
 
-          {/* Right Column - Timeline */}
+          {/* Right Column - Empty for now, could be used for other content later */}
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-center lg:text-left">経歴タイムライン</h3>
-            <Timeline items={timelineData} />
           </div>
         </div>
       </div>
