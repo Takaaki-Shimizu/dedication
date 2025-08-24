@@ -278,14 +278,12 @@ export function AboutSection() {
           </p>
         </div>
 
-        {/* Main Content - 2 Column Layout */}
-        <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
-          
-          {/* Left Column - Profile & Introduction */}
+        {/* Main Content - Centered Layout */}
+        <div className="max-w-5xl mx-auto">
           <div className="space-y-12">
             {/* Timeline */}
             <div>
-              <h3 className="text-2xl font-bold mb-8 text-center lg:text-left">経歴タイムライン</h3>
+              <h3 className="text-2xl font-bold mb-8 text-center">経歴タイムライン</h3>
               <Timeline items={timelineData} />
             </div>
 
@@ -347,10 +345,6 @@ export function AboutSection() {
               interests={interestsData}
               certifications={certificationsData}
             />
-          </div>
-
-          {/* Right Column - Empty for now, could be used for other content later */}
-          <div>
           </div>
         </div>
       </div>
