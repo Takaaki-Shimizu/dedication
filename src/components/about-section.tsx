@@ -17,8 +17,9 @@ import {
   Target, 
   Book,
   Trophy,
-  Activity,
   Wine,
+  Shield,
+  Footprints,
 } from "lucide-react";
 
 // Sample data
@@ -146,13 +147,13 @@ const interestsData: Interest[] = [
     id: "2",
     title: "セキュリティ",
     description: "情報処理安全確保支援士に挑戦中(後4点で落ちたので、午後試験対策を強化中です)。セキュリティを理解するには膨大な知識が必要ですが、ハードルが高いからこそ挑戦しがいがあります。",
-    icon: <Wine className="w-8 h-8" />
+    icon: <Shield className="w-8 h-8" />
   },
   {
     id: "3",
     title: "フルマラソン",
     description: "サブスリー(3時間以内にゴールすること)を目標に年2〜3回フルマラソンに挑戦しています。努力は必ずしも報われないが、努力しないと絶対に目標を達成できないことを実感でき、継続することの大切さを日々痛感しています。",
-    icon: <Activity className="w-8 h-8" />
+    icon: <Footprints className="w-8 h-8" />
   },
   {
     id: "4",
@@ -278,14 +279,12 @@ export function AboutSection() {
           </p>
         </div>
 
-        {/* Main Content - 2 Column Layout */}
-        <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
-          
-          {/* Left Column - Profile & Introduction */}
+        {/* Main Content - Centered Layout */}
+        <div className="max-w-5xl mx-auto">
           <div className="space-y-12">
             {/* Timeline */}
             <div>
-              <h3 className="text-2xl font-bold mb-8 text-center lg:text-left">経歴タイムライン</h3>
+              <h3 className="text-2xl font-bold mb-8 text-center">経歴タイムライン</h3>
               <Timeline items={timelineData} />
             </div>
 
@@ -332,7 +331,10 @@ export function AboutSection() {
                 <h3 className="text-xl font-bold mb-6">自己紹介</h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    継続力に自信があり、毎月100km以上のランニング(12ヶ月連続継続中)や、毎年春秋にあるIPA高度資格試験学習を通した体系的な知識獲得を進めています。
+                    新卒で不動産賃貸仲介営業を3年半経験後、ソフトウェアエンジニアに転職し、開発の実務経験は5年目になります（2021年4月〜）。
+                  </p>
+                  <p>
+                    継続力に自信があり、毎月100km以上のランニング（2024年7月から13ヶ月連続継続中）や、毎年春秋にあるIPA高度資格試験学習を通した体系的な知識獲得を進めています。
                   </p>
                   <p>
                     また、目標の達成のために「あえてやらない」ことも大切にし、17年続けた卓球をお休みしてマラソンの練習に集中しています。
@@ -347,10 +349,6 @@ export function AboutSection() {
               interests={interestsData}
               certifications={certificationsData}
             />
-          </div>
-
-          {/* Right Column - Empty for now, could be used for other content later */}
-          <div>
           </div>
         </div>
       </div>
