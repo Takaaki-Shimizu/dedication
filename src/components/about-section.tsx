@@ -17,8 +17,9 @@ import {
   Target, 
   Book,
   Trophy,
-  Activity,
   Wine,
+  Shield,
+  Footprints,
 } from "lucide-react";
 
 // Sample data
@@ -146,13 +147,13 @@ const interestsData: Interest[] = [
     id: "2",
     title: "セキュリティ",
     description: "情報処理安全確保支援士に挑戦中(後4点で落ちたので、午後試験対策を強化中です)。セキュリティを理解するには膨大な知識が必要ですが、ハードルが高いからこそ挑戦しがいがあります。",
-    icon: <Wine className="w-8 h-8" />
+    icon: <Shield className="w-8 h-8" />
   },
   {
     id: "3",
     title: "フルマラソン",
     description: "サブスリー(3時間以内にゴールすること)を目標に年2〜3回フルマラソンに挑戦しています。努力は必ずしも報われないが、努力しないと絶対に目標を達成できないことを実感でき、継続することの大切さを日々痛感しています。",
-    icon: <Activity className="w-8 h-8" />
+    icon: <Footprints className="w-8 h-8" />
   },
   {
     id: "4",
