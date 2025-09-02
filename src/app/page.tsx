@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { TypingAnimation } from "@/components/typing-animation";
 import { SkillCard } from "@/components/skill-card";
-import { ProjectsSection } from "@/components/projects-section";
 import { AboutSection } from "@/components/about-section";
 import { HeaderNavigation } from "@/components/header-navigation";
 import { Footer } from "@/components/footer";
@@ -133,12 +132,6 @@ export default function Home() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                  <Button asChild variant="outline" size="lg" className="border-2 border-blue-600/20 hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/20 font-semibold px-8 py-6 text-lg magnetic-button">
-                    <Link href="#projects">
-                      <ExternalLink className="mr-2 h-5 w-5" />
-                      作品を見る(WIP)
-                    </Link>
-                  </Button>
                   <Button asChild variant="ghost" size="lg" className="font-semibold px-8 py-6 text-lg hover:bg-slate-100 dark:hover:bg-slate-800 magnetic-button">
                     <Link href="/resume">
                       <Download className="mr-2 h-5 w-5" />
@@ -276,8 +269,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Projects Section */}
-        <ProjectsSection />
 
       </main>
       
