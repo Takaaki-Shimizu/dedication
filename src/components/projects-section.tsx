@@ -4,50 +4,7 @@ import { useState, useMemo } from "react";
 import { ProjectCard, type Project } from "./project-card";
 import { ProjectFilter } from "./project-filter";
 
-const sampleProjects: Project[] = [
-  {
-    id: "1",
-    title: "WIP",
-    category: "WIP",
-    description: "WIP",
-    fullDescription: "WIP",
-    technologies: ["WIP"],
-    image: "WIP",
-    githubUrl: "https://github.com/Takaaki-Shimizu/WIP",
-    liveUrl: "https://WIP",
-    detailUrl: "/WIP",
-    date: "XXXX年月",
-    status: "completed"
-  },
-  {
-    id: "2",
-    title: "WIP",
-    category: "WIP",
-    description: "WIP",
-    fullDescription: "WIP",
-    technologies: ["WIP"],
-    image: "WIP",
-    githubUrl: "https://github.com/Takaaki-Shimizu/WIP",
-    liveUrl: "https://WIP",
-    detailUrl: "/WIP",
-    date: "XXXX年月",
-    status: "completed"
-  },
-  {
-    id: "3",
-    title: "WIP",
-    category: "WIP",
-    description: "WIP",
-    fullDescription: "WIP",
-    technologies: ["WIP"],
-    image: "WIP",
-    githubUrl: "https://github.com/Takaaki-Shimizu/WIP",
-    liveUrl: "https://WIP",
-    detailUrl: "/WIP",
-    date: "XXXX年月",
-    status: "completed"
-  },
-];
+const sampleProjects: Project[] = [];
 
 export function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -84,10 +41,10 @@ export function ProjectsSection() {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-            プロジェクト & ポートフォリオ
+            プロジェクト
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            WIP
+            現在プロジェクトを準備中です
           </p>
         </div>
 
