@@ -10,6 +10,14 @@ export interface SpeakingHistory {
   videoUrl: string;
   description?: string;
 }
+
+export interface TechBlog {
+  id: string;
+  title: string;
+  date: string;
+  url: string;
+  description?: string;
+}
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Users, 
@@ -262,6 +270,23 @@ const speakingHistoryData: SpeakingHistory[] = [
   }
 ];
 
+const techBlogData: TechBlog[] = [
+  {
+    id: "1",
+    title: "応用情報技術者試験（AP）に合格しました！",
+    date: "2025年2月5日",
+    url: "https://tech.willgate.co.jp/entry/2025/02/05/102842",
+    description: "昨年10月に受験した応用情報技術者試験（AP）に合格しました。受験の背景や試験に向けて行った勉強方法、受験してみての感想などをお伝えします。"
+  },
+  {
+    id: "2",
+    title: "あなたは「CSRF token mismatch.」の沼から抜けられるか",
+    date: "2024年12月8日",
+    url: "https://tech.willgate.co.jp/entry/2024/12/08/090000",
+    description: "「CSRF token mismatch.」エラーに遭遇した際の解決方法について、実際に沼にハマった経験から得た知見を共有します。"
+  }
+];
+
 export function AboutSection() {
   return (
     <section id="about" className="py-20 bg-gradient-to-br from-muted/10 to-background relative">
@@ -321,6 +346,39 @@ export function AboutSection() {
                       )}
                     </CardContent>
                   </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* Tech Blog Section */}
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-center">テックブログ</h3>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {techBlogData.map((blog, index) => (
+                  <a 
+                    key={blog.id}
+                    href={blog.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Card 
+                      className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-background to-muted/20 border-2 animate-fade-in-up cursor-pointer"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      <CardHeader className="pb-4">
+                        <CardTitle className="text-lg mb-2 hover:text-primary transition-colors">
+                          {blog.title}
+                        </CardTitle>
+                        <p className="text-sm text-muted-foreground">{blog.date}</p>
+                      </CardHeader>
+                      <CardContent className="pt-0">
+                        {blog.description && (
+                          <p className="text-sm text-muted-foreground leading-relaxed">{blog.description}</p>
+                        )}
+                      </CardContent>
+                    </Card>
+                  </a>
                 ))}
               </div>
             </div>
