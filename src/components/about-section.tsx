@@ -355,30 +355,30 @@ export function AboutSection() {
               <h3 className="text-2xl font-bold mb-6 text-center">テックブログ</h3>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {techBlogData.map((blog, index) => (
-                  <Card 
+                  <a 
                     key={blog.id}
-                    className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-background to-muted/20 border-2 animate-fade-in-up"
-                    style={{ animationDelay: `${index * 100}ms` }}
+                    href={blog.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block"
                   >
-                    <CardHeader className="pb-4">
-                      <CardTitle className="text-lg mb-2">
-                        <a 
-                          href={blog.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="hover:text-primary transition-colors"
-                        >
+                    <Card 
+                      className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-background to-muted/20 border-2 animate-fade-in-up cursor-pointer"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      <CardHeader className="pb-4">
+                        <CardTitle className="text-lg mb-2 hover:text-primary transition-colors">
                           {blog.title}
-                        </a>
-                      </CardTitle>
-                      <p className="text-sm text-muted-foreground">{blog.date}</p>
-                    </CardHeader>
-                    <CardContent className="pt-0">
-                      {blog.description && (
-                        <p className="text-sm text-muted-foreground leading-relaxed">{blog.description}</p>
-                      )}
-                    </CardContent>
-                  </Card>
+                        </CardTitle>
+                        <p className="text-sm text-muted-foreground">{blog.date}</p>
+                      </CardHeader>
+                      <CardContent className="pt-0">
+                        {blog.description && (
+                          <p className="text-sm text-muted-foreground leading-relaxed">{blog.description}</p>
+                        )}
+                      </CardContent>
+                    </Card>
+                  </a>
                 ))}
               </div>
             </div>
